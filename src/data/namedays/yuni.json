@@ -1,0 +1,110 @@
+{
+  "month": "yuni",
+  "monthName": "юни",
+  "monthNameGenitive": "юни",
+  "year": 2025,
+  "description": "Всички именни дни през юни — точни дати, традиции и бързи поздрави. Добавете ги в календара си с 1 клик.",
+  "totalNameDays": 15,
+  "namedays": [
+    {
+      "date": "2025-06-01",
+      "day": 1,
+      "names": ["Юстин", "Юстина"],
+      "variants": ["Устин", "Устина"],
+      "saint": "Св. Юстин Философ",
+      "saintIcon": "✚",
+      "traditions": "Св. Юстин е бил философ и мъченик от II век.",
+      "isPopular": false,
+      "slug": "yustin"
+    },
+    {
+      "date": "2025-06-02",
+      "day": 2,
+      "names": ["Никифор"],
+      "variants": ["Никодим"],
+      "saint": "Св. Никифор Изповедник",
+      "saintIcon": "✚",
+      "traditions": null,
+      "isPopular": false,
+      "slug": "nikifor"
+    },
+    {
+      "date": "2025-06-06",
+      "day": 6,
+      "names": ["Иларион"],
+      "variants": ["Ларион", "Ларо"],
+      "saint": "Св. Иларион Велики",
+      "saintIcon": "✚",
+      "traditions": null,
+      "isPopular": false,
+      "slug": "ilarion"
+    },
+    {
+      "date": "2025-06-11",
+      "day": 11,
+      "names": ["Вартоломей"],
+      "variants": ["Вартол"],
+      "saint": "Св. апостол Вартоломей",
+      "saintIcon": "✚",
+      "traditions": null,
+      "isPopular": false,
+      "slug": "vartolomey"
+    },
+    {
+      "date": "2025-06-13",
+      "day": 13,
+      "names": ["Павлин", "Павлина"],
+      "variants": [],
+      "saint": "Св. Павлин",
+      "saintIcon": "✚",
+      "traditions": null,
+      "isPopular": false,
+      "slug": "pavlin"
+    },
+    {
+      "date": "2025-06-17",
+      "day": 17,
+      "names": ["Мануил", "Мануела"],
+      "variants": ["Мануела", "Мана", "Мани"],
+      "saint": "Св. мъченици Мануил, Савел и Исмаил",
+      "saintIcon": "✚",
+      "traditions": null,
+      "isPopular": false,
+      "slug": "manuil"
+    },
+    {
+      "date": "2025-06-24",
+      "day": 24,
+      "names": ["Еньо", "Иван", "Ивайло", "Ян", "Яна", "Йоан", "Йоана"],
+      "variants": ["Ваньо", "Ванче", "Иванка", "Ивана", "Йоанка"],
+      "saint": "Рождество на Св. Йоан Кръстител (Еньовден)",
+      "saintIcon": "✚",
+      "traditions": "Еньовден е един от най-важните празници в българския календар. Според народните вярвания, в тази нощ природата разкрива магическата си сила.",
+      "isPopular": true,
+      "slug": "ivan"
+    },
+    {
+      "date": "2025-06-29",
+      "day": 29,
+      "names": ["Петър", "Петя", "Петър", "Петко", "Павел", "Павлина", "Пенка"],
+      "variants": ["Петьо", "Пенка", "Пенчо", "Пешо", "Павлин"],
+      "saint": "Св. апостоли Петър и Павел",
+      "saintIcon": "✚",
+      "traditions": "Петровден е голям празник и традиционно се отбелязва с курбан и гощавки. Петрови пости завършват този ден.",
+      "isPopular": true,
+      "slug": "petar-pavel"
+    },
+    {
+      "date": "2025-06-30",
+      "day": 30,
+      "names": ["Апостол", "Апостола"],
+      "variants": [],
+      "saint": "Събор на светите 12 апостоли",
+      "saintIcon": "✚",
+      "traditions": null,
+      "isPopular": false,
+      "slug": "apostol"
+    }
+  ]
+}
+

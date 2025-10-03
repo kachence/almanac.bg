@@ -1,0 +1,287 @@
+{
+  "id": "zhalba-nelk",
+  "title": "Жалба до НЕЛК",
+  "subtitle": "Обжалване на експертно решение",
+  "version": "2025.09",
+  "lastReviewed": "15 септември 2025",
+  "category": "Жалби",
+  "institution": "НЕЛК",
+  "fileSize": "245 KB",
+  "hasDocx": true,
+  "description": "Образец за жалба до Националната експертна лекарска комисия (НЕЛК) при несъгласие с експертно решение на РКМЕ относно степента на трудоспособност.",
+  
+  "pdfTemplate": "ZhalbaNELKTemplate",
+  
+  "meta": {
+    "icon": "faGavel",
+    "usage": "При несъгласие с експертно решение на РКМЕ относно степента на трудоспособност или медицинската експертиза",
+    "deadline": "7 дни от получаване на експертното решение",
+    "submission": {
+      "where": "НЕЛК - Национална експертна лекарска комисия",
+      "how": "Лично в офиса или по пощата с препоръчано писмо",
+      "url": "https://www.mh.government.bg"
+    }
+  },
+
+  "pdfTemplate": "ZhalbaNELKTemplate",
+  
+  "formSchema": [
+    {
+      "section": "institution",
+      "title": "Институция",
+      "icon": "accent",
+      "fields": [
+        {
+          "id": "rkmeCity",
+          "label": "Град на РКМЕ *",
+          "type": "text",
+          "placeholder": "напр. Хасково, Пловдив, Варна...",
+          "required": true
+        }
+      ]
+    },
+    {
+      "section": "personal",
+      "title": "Лични данни", 
+      "icon": "primary",
+      "fields": [
+        {
+          "id": "fullName",
+          "label": "Име, презиме, фамилия *",
+          "type": "text",
+          "placeholder": "Въведете пълното си име",
+          "required": true
+        },
+        {
+          "id": "egn",
+          "label": "ЕГН *",
+          "type": "text",
+          "placeholder": "0000000000",
+          "maxLength": 10,
+          "required": true
+        },
+        {
+          "id": "address",
+          "label": "Гр./с. *",
+          "type": "text",
+          "placeholder": "гр./с., ул., №, вх., ет., ап.",
+          "required": true
+        },
+        {
+          "id": "municipality",
+          "label": "Община",
+          "type": "text",
+          "placeholder": "Община",
+          "gridSize": "half"
+        },
+        {
+          "id": "region",
+          "label": "Област",
+          "type": "text",
+          "placeholder": "Област",
+          "gridSize": "half"
+        },
+        {
+          "id": "blockNumber",
+          "label": "Бл.№",
+          "type": "text",
+          "placeholder": "000",
+          "gridSize": "third"
+        },
+        {
+          "id": "entrance",
+          "label": "Вх.",
+          "type": "text",
+          "placeholder": "А",
+          "gridSize": "third"
+        },
+        {
+          "id": "apartment",
+          "label": "Ап.",
+          "type": "text",
+          "placeholder": "00",
+          "gridSize": "third"
+        },
+        {
+          "id": "floor",
+          "label": "Ет.",
+          "type": "text",
+          "placeholder": "0",
+          "gridSize": "half"
+        },
+        {
+          "id": "phone",
+          "label": "Телефон за връзка",
+          "type": "tel",
+          "placeholder": "GSM номер",
+          "gridSize": "half"
+        }
+      ]
+    },
+    {
+      "section": "expertDecision",
+      "title": "Експертно решение",
+      "icon": "warning", 
+      "fields": [
+        {
+          "id": "expertDecisionNumber",
+          "label": "Номер на експертно решение",
+          "type": "text",
+          "placeholder": "№ ............"
+        },
+        {
+          "id": "expertDecisionDate",
+          "label": "Дата на решението",
+          "type": "date"
+        },
+        {
+          "id": "diseaseType",
+          "label": "Вид заболявания *",
+          "type": "text",
+          "placeholder": "за ............ ЗАБОЛЯВАНИЯ",
+          "required": true
+        },
+        {
+          "id": "diseaseLocation",
+          "label": "Заболяване гр. *",
+          "type": "text",
+          "placeholder": "Град на заболяването",
+          "required": true
+        }
+      ]
+    },
+    {
+      "section": "complaintDetails",
+      "title": "Детайли на жалбата",
+      "icon": "accent",
+      "fields": [
+        {
+          "id": "telkPercentage",
+          "label": "Процент по ТЕЛК *",
+          "type": "number",
+          "placeholder": "0",
+          "min": 0,
+          "max": 100,
+          "required": true
+        },
+        {
+          "id": "complaintDetails",
+          "label": "Детайли на жалбата *",
+          "type": "textarea",
+          "placeholder": "Опишете детайлите на жалбата (5 реда)...",
+          "rows": 5,
+          "required": true
+        },
+        {
+          "id": "schedulingDate",
+          "label": "Текуща дата *",
+          "type": "date",
+          "required": true
+        },
+        {
+          "id": "signingLocation",
+          "label": "Град/с. за подписване",
+          "type": "text",
+          "placeholder": "Място на подписване"
+        },
+        {
+          "id": "signerName",
+          "label": "Име и фамилия на подписващия *",
+          "type": "text",
+          "placeholder": "Име и фамилия за подпис",
+          "required": true
+        }
+      ]
+    }
+  ],
+
+  "prerequisites": [
+    "Документ за самоличност (лична карта или паспорт)",
+    "Копие от експертното решение на РКМЕ",
+    "Медицинска документация, свързана със заболяването",
+    "Доказателства за обстоятелствата по случая"
+  ],
+
+  "steps": [
+    "Попълнете личните си данни и адрес за кореспонденция",
+    "Въведете данните от експертното решение на РКМЕ",
+    "Опишете подробно мотивите за несъгласие",
+    "Посочете исканията си за преразглеждане",
+    "Подпишете и подайте жалбата в 7-дневния срок"
+  ],
+
+  "requiredDocuments": [
+    "Копие от документ за самоличност",
+    "Копие от експертното решение на РКМЕ",
+    "Медицински документи, обосноваващи жалбата",
+    "Други доказателства по случая (ако има)",
+    "Пълномощно (при представителство)"
+  ],
+
+  "commonMistakes": [
+    "Закъснение при подаване - спазвайте 7-дневния срок",
+    "Липса на копие от експертното решение",
+    "Неконкретни мотиви за несъгласие",
+    "Липса на медицинска документация"
+  ],
+
+  "sources": [
+    {
+      "title": "Закон за здравето",
+      "url": "https://lex.bg/laws/ldoc/2134919683",
+      "lastChecked": "10 септември 2025"
+    },
+    {
+      "title": "Наредба за медицинската експертиза",
+      "url": "https://www.mh.government.bg",
+      "lastChecked": "15 септември 2025"
+    },
+    {
+      "title": "ПУОМЕРКМЕ - Правилник за устройството и организацията",
+      "url": "https://lex.bg/laws/ldoc/2135475712",
+      "lastChecked": "12 септември 2025"
+    }
+  ],
+
+  "relatedTemplates": [
+    {
+      "slug": "/obrazec/molbi/molba-bolnichen",
+      "title": "Молба за болничен",
+      "subtitle": "Временна неработоспособност",
+      "category": "Молби"
+    },
+    {
+      "slug": "/templates/zhalba-bolnica",
+      "title": "Жалба до болница",
+      "subtitle": "Некачествено лечение",
+      "category": "Жалби"
+    },
+    {
+      "slug": "/templates/molba-pensiya",
+      "title": "Молба за пенсия",
+      "subtitle": "Пенсия по болест",
+      "category": "Молби"
+    },
+    {
+      "slug": "/templates/zhalba-noi",
+      "title": "Жалба до НОИ",
+      "subtitle": "Социални осигуровки",
+      "category": "Жалби"
+    }
+  ],
+
+  "faq": [
+    {
+      "question": "Какъв е срокът за подаване на жалба до НЕЛК?",
+      "answer": "7 дни от получаване на експертното решение на РКМЕ. При просрочване жалбата може да бъде отхвърлена."
+    },
+    {
+      "question": "Безплатно ли е подаването на жалба?",
+      "answer": "Да, подаването на жалба до НЕЛК е напълно безплатно. Не се заплащат такси за експертизата."
+    },
+    {
+      "question": "Мога ли да подам жалба онлайн?",
+      "answer": "Не, жалбите до НЕЛК се подават лично или по пощата с препоръчано писмо. Онлайн подаване не е налично."
+    }
+  ]
+}
