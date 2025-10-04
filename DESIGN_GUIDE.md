@@ -1,135 +1,373 @@
-# blanka.bg – Design principles and implementation notes
+# Almanac.bg – Design System
 
-Keep it official‑adjacent, calm, and conversion‑focused. The UI should feel modern, trustworthy, and fast. These rules capture the landing page decisions so new features stay coherent.
+A warm, human calendar experience that feels inviting rather than sterile. Built around the **Ember & Saffron** color palette—warm autumn tones that differentiate us from the sea of blue/gray calendars.
 
-## Core principles
+## Core Principles
 
-- Clarity over decoration; prioritize scanability and contrast
-- Search and key CTAs are primary; everything else is secondary
-- One visual language across light and dark themes (CSS tokens)
-- Subtle motion only; keep performance snappy
-- Accessible by default (focus rings, readable sizes, color contrast)
+- **Warm over cold** – Ember orange, saffron yellow, warm neutrals. No cold blues/grays.
+- **Human over corporate** – Friendly, approachable, personal. Calendars should feel helpful, not clinical.
+- **Clarity over decoration** – Information first, but presented beautifully.
+- **Fast answers** – "What's today?" answered in 3 seconds; deep-dives available for those who want them.
+- **Accessible by default** – WCAG AA contrast, proper focus states, readable sizes.
 
-## Layout and spacing
-
-- Page container: `max-w-8xl mx-auto px-4 sm:px-6 lg:px-8`
-- Section spacing: `py-14 lg:py-20` (landing hero/blocks)
-- Grid gaps: default `gap-12 lg:gap-20` (hero split), cards `gap-4`
-- Radii: cards/buttons `rounded-2xl`; small controls `rounded-xl`
-- Shadows: very subtle; prefer border + elevation on hover
-
-## Colors (theme tokens)
+## Color Palette (Ember & Saffron)
 
 Use Tailwind color aliases that map to CSS variables; never hardcode hex.
 
-- Surfaces: `bg-bg`, `bg-panel`, `bg-card`
-- Text: `text-text`, `text-muted`
-- Border: `border-border` (never `border-white`)  
-  - When hiding a border for animation, use `border-transparent`, not removal
-- Primary: `text-primary`, `bg-primary`, `ring-primary`  
-  - Opacity utilities are supported via RGB tokens. You can use: `bg-primary/15`, `text-primary/90`, `ring-primary/35`.
-- Status: `success`, `warning`, `danger` (sparingly)
+### Brand Colors
 
-Background pattern for feature sections: add both `blueprint-grid` and `noise-overlay` with reduced opacity.
+- **Primary (Ember):** `bg-primary` (#F46A03) / `hover:bg-primary-hover` (#DD5F02) / `active:bg-primary-pressed` (#C95502)
+- **Accent (Saffron):** `bg-accent` (#F4BF3A) – used for highlights, today indicators, focus rings
+- **Critical (Carmine):** `bg-critical` (#CC2B2B) – holidays, non-working days, urgent badges
+- **Support (Beeswax):** `bg-soft` (#E9DEB8) – soft fills, subtle backgrounds (use at 60% opacity: `bg-soft/60`)
+- **Ink-Navy (rare use):** `text-ink-rare` (#0C3042) – ≤5% usage, only for extreme contrast needs
+
+### Surfaces
+
+- **Background:** `bg-bg` (#FFFAF2 light / #18120E dark)
+- **Alt Background:** `bg-bg-alt` (#FFF6EB / #1A1410)
+- **Cards:** `bg-card` (#FEF1E1 / #261D17)
+- **Panels:** `bg-panel` (#FFF6EB / #201813)
+- **Borders:** `border-border` (#F2E6D7 / #3A2E26)
+
+### Text
+
+- **Primary:** `text-text` (#1F1915 / #F4EEE8)
+- **Muted:** `text-muted` (#7A6B5E / #C9BFB6) – warmer earthier tone
+- **Muted Strong:** `text-muted-strong` (#6B5E55 / #D4CAC1)
+
+### Semantic Colors
+
+- **Info:** `bg-info` (#D39A17) with `bg-info-bg` tint
+- **Warning:** `bg-warning` (#B5560A) with `bg-warning-bg` tint
+- **Success:** `bg-success` (#8C6E1A) with `bg-success-bg` tint
+
+**Note:** Success is olive-amber, not green. Fits the warm palette.
+
+## Layout & Spacing
+
+### Containers
 
 ```html
-<section class="relative">
-  <div class="relative ..."> ... </div>
-</section>
+<!-- Page container -->
+<div class="max-w-7xl mx-auto px-4">
+
+<!-- Hero sections (wider) -->
+<div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
 ```
+
+### Section Spacing
+
+- Hero sections: `py-12 px-4`
+- Content sections: `py-12 px-4` or `py-16 px-4`
+- Tight sections: `py-6 px-4` or `py-8 px-4`
+
+### Grid Patterns
+
+- **Hero (Today + Upcoming):** `grid lg:grid-cols-2 gap-8 lg:items-stretch`
+- **Content + Sidebar:** `grid lg:grid-cols-[1fr,360px] gap-8`
+- **Card grids:** `grid md:grid-cols-2 lg:grid-cols-3 gap-6`
+
+### Radii
+
+- **Cards:** `rounded-2xl`
+- **Buttons:** `rounded-xl`
+- **Chips/badges:** `rounded-full` or `rounded-lg`
+- **Small controls:** `rounded-lg`
+
+### Shadows
+
+Subtle, 2-layer system:
+
+```css
+shadow-[0_1px_2px_rgba(31,25,21,.08),0_8px_24px_rgba(31,25,21,.06)]
+```
+
+Use sparingly; prefer border + slight elevation on hover.
 
 ## Typography
 
-- Font: Inter (system fallback); base size `text-base` set to 15px
-- Headings: tracking-tight; examples:  
-  - H1 `text-4xl lg:text-6xl font-semibold`  
-  - H2 `text-3xl lg:text-4xl font-semibold`  
-- Body copy: `text-[15px] text-muted`
+### Font Stack
 
-## Borders and surfaces
+- **Body:** Inter (Google Fonts)
+- **Code/Mono:** IBM Plex Mono (for calendar grids, dates)
 
-- Default border on all elevated elements: `border border-border`
-- Keep a border in both states of sticky headers to avoid a flash:  
-  - Not scrolled: `border-b border-transparent bg-transparent`  
-  - Scrolled: `border-b border-border bg-[color-mix(in_oklab,var(--bg),transparent_10%)]/70 backdrop-blur`
+### Hierarchy
 
-## Buttons
-
-- Primary (CTA):
 ```html
-<button class="rounded-2xl bg-primary text-primary-foreground px-6 py-3 text-sm font-medium hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 disabled:opacity-50">
-  Регистрирай се безплатно
-</button>
+<!-- H1 (page hero) -->
+<h1 class="text-4xl lg:text-5xl font-bold text-text">
+
+<!-- H1 (massive hero) -->
+<h1 class="text-5xl lg:text-6xl font-bold text-text">
+
+<!-- H2 (section) -->
+<h2 class="text-3xl font-bold text-text">
+
+<!-- H3 (subsection) -->
+<h3 class="text-2xl font-bold text-text">
+
+<!-- Body -->
+<p class="text-text">
+
+<!-- Secondary text -->
+<p class="text-muted">
+<p class="text-muted-strong">
 ```
-- Ghost/secondary:
-```html
-<a class="rounded-2xl border border-border px-6 py-3 text-sm hover:border-primary/40">Разгледай образци</a>
-```
 
-## Inputs (search pattern)
+### Font Weights
+
+- Regular: 400 (default)
+- Medium: 500 (use sparingly)
+- **Semibold: 600 (preferred for emphasis)**
+- Bold: 700 (headings only)
+
+## Components
+
+### Cards (Main Content)
 
 ```html
-<div class="relative group">
-  <!-- leading icon -->
-  <svg class="absolute left-5 top-1/2 -translate-y-1/2 h-5 w-5 text-muted group-focus-within:text-primary" />
-  <input class="w-full rounded-2xl bg-card border px-14 py-4 text-[15px] text-text placeholder:text-muted/70 focus:outline-none focus:border-primary/50 focus:ring-2 focus:ring-primary/35" />
+<div class="bg-card rounded-2xl border border-border p-6 shadow-[0_1px_2px_rgba(31,25,21,.08),0_8px_24px_rgba(31,25,21,.06)]">
+  <h2 class="text-2xl font-bold text-text mb-6">Card Title</h2>
+  <p class="text-muted">Content...</p>
 </div>
 ```
 
-## Cards (templates)
+**With accent top border (hero cards):**
 
-- Wrapper: `rounded-2xl border border-border bg-card p-5 shadow-sm hover:shadow-md hover:border-primary/30 transition-all`
-- Content uses `text-text` and `text-muted`; right chevron nudges `translate-x-0.5` on hover
-- Badges row: prefer `Badge` component (PDF, DOCX, version)
+```html
+<div class="... border-t-[2px] border-t-accent">
+```
 
-## Badges
+### Buttons
 
-- Use shadcn `Badge` with variants wired to tokens. Examples in codebase: `variant="pdf"`, `variant="docx"`, `variant="muted"`, `variant="warning"`, `variant="accent"`.
+**Primary CTA:**
 
-## Icons
+```html
+<button class="h-12 px-8 bg-primary hover:bg-primary-hover text-white rounded-xl font-semibold transition-colors shadow-sm focus:outline focus:outline-3 focus:outline-accent/63 focus:outline-offset-2">
+  Виж календара
+</button>
+```
 
-- Use FontAwesome only (preloaded in `lib/fontawesome`).
-- Accent icons: `text-primary` (not raw color)  
-- "How it works" icon circles: `bg-primary/15 border-2 border-primary` with the icon `text-primary` centered.
+**Secondary:**
 
-## Motion
+```html
+<button class="h-12 px-5 border-2 border-[#F2E6D7] text-[#C95502] bg-[#FFFBF2] hover:bg-[#FFE8D1] rounded-xl font-semibold transition-colors focus:outline focus:outline-3 focus:outline-accent/63 focus:outline-offset-2">
+  Добави събития
+</button>
+```
 
-- Framer Motion for micro‑entrance and hover lifts
-- Durations: 0.2–0.6s; `y: 20` for fade‑up; stagger small (≤0.1s)
-- No parallax/heavy effects; keep 60fps
+**Ghost/Link button:**
+
+```html
+<button class="px-4 h-10 bg-card text-text border border-border hover:border-primary/40 rounded-lg font-medium transition-colors">
+  Action
+</button>
+```
+
+### Chips (Name Days, Categories)
+
+**Name day chip (warm yellow):**
+
+```html
+<span class="px-3 py-1.5 bg-[#FFF0C8] text-[#1F1915] border border-[#F0C770] rounded-full text-sm font-medium">
+  Денис
+</span>
+```
+
+**Holiday chip (critical red):**
+
+```html
+<span class="px-2 py-0.5 bg-critical text-white rounded text-xs font-medium">
+  Неработен
+</span>
+```
+
+**Movable holiday badge:**
+
+```html
+<span class="px-2 py-0.5 bg-warning/20 text-warning border border-warning/40 rounded text-xs font-medium">
+  ↔ Подвижен
+</span>
+```
+
+**Date chip (for lists):**
+
+```html
+<div class="w-14 h-14 bg-[#FFF0C8] border border-[#F0C770] rounded-lg flex flex-col items-center justify-center leading-tight">
+  <span class="text-[#C95502] font-bold text-lg">6</span>
+  <span class="text-[#C95502] font-medium text-xs">окт</span>
+</div>
+```
+
+### Icons
+
+- **Use:** Lucide React icons (primary), FontAwesome (legacy/secondary)
+- **Size guide:** `w-4 h-4` (small), `w-5 h-5` (medium), `w-8 h-8` (large), `w-10 h-10` (hero)
+- **Color:** Prefer `text-primary`, `text-accent`, `text-muted` over raw colors
+
+**Icon + text alignment:**
+
+```html
+<div class="flex items-center gap-2">
+  <Moon class="w-4 h-4" />
+  <span>Растяща луна</span>
+</div>
+```
+
+### Focus States
+
+**Standard focus ring (accent yellow, 63% opacity):**
+
+```css
+focus:outline focus:outline-3 focus:outline-[#F4BF3AA0] focus:outline-offset-2
+```
+
+Always visible, always accessible.
+
+## Patterns
+
+### Day Metadata Strip
+
+```html
+<div class="flex items-center gap-2 text-xs text-muted">
+  <span>Работен ден</span>
+  <span class="text-muted/50">•</span>
+  <span>Седмица 40</span>
+  <span class="text-muted/50">•</span>
+  <span>Ден 276 от годината</span>
+</div>
+```
+
+### Legend/Key
+
+```html
+<div class="flex items-center gap-2">
+  <div class="w-3 h-3 rounded-full bg-accent" />
+  <span class="text-sm text-muted">Имен ден</span>
+</div>
+```
+
+### Breadcrumbs
+
+```html
+<nav class="flex items-center text-sm text-muted mb-6">
+  <Link href="/" class="hover:text-text transition-colors">Начало</Link>
+  <ChevronRight class="h-4 w-4 mx-2" />
+  <span class="text-text font-medium">Текуща страница</span>
+</nav>
+```
+
+### Month Navigator (chips)
+
+```html
+<div class="flex flex-wrap gap-2">
+  <a href="#month-1" class="px-4 h-10 bg-card text-text border border-border hover:border-primary/40 rounded-lg font-medium transition-colors">
+    ян
+  </a>
+</div>
+```
+
+### "Next/Upcoming" Cards
+
+```html
+<button class="w-full flex items-start gap-3 p-3 rounded-lg hover:bg-panel transition-colors text-left">
+  <span class="flex-shrink-0 w-14 h-14 bg-[#FFF0C8] border border-[#F0C770] rounded-lg flex flex-col items-center justify-center leading-tight">
+    <span class="text-[#C95502] font-bold text-lg">6</span>
+    <span class="text-[#C95502] font-medium text-xs">окт</span>
+  </span>
+  <span class="flex-1 min-w-0 flex flex-col">
+    <span class="text-sm font-semibold text-text">Тома, Томислав</span>
+    <span class="text-xs text-muted-strong">Имен ден</span>
+  </span>
+</button>
+```
+
+**Important:** Use `<span>` not `<div>` inside buttons (hydration/HTML validity).
 
 ## Header
 
-- Sticky; scrolled state adds: `border-b border-border` + subtle backdrop blur
-- Search is king: desktop shows command dialog on focus; mobile routes to `/search`
-- Use `max-w-8xl` for header width; make the logo/icon `text-primary`
+```html
+<header class="transition-all duration-200 border-b border-border bg-[color-mix(in_oklab,var(--bg),transparent_10%)]/70 backdrop-blur">
+  <div class="max-w-8xl mx-auto px-4 h-16 flex items-center gap-3">
+    <!-- Logo, nav, search, theme toggle, auth -->
+  </div>
+</header>
+```
 
-## Hero
+**Not sticky** (scrolls with page). If making sticky, add: `sticky top-0 z-50`.
 
-- Left: headline with two accent spans (primary/accent)  
-- Right: 2‑column grid of template cards (6 items)
-- Trust strip uses small `Badge` components (PDF/DOCX), `text-xs`
+## Hero Section (Today + Upcoming)
 
-## How it works
+```html
+<section class="py-12 px-4">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid lg:grid-cols-2 gap-8 lg:items-stretch">
+      <!-- TodayCard (left) -->
+      <!-- UpcomingDates (right, hidden on mobile) -->
+    </div>
+  </div>
+</section>
+```
 
-- Three columns; each step uses a primary icon circle:  
-`w-20 h-20 rounded-full bg-primary/15 border-2 border-primary grid place-items-center`
+**Key:** Use `lg:items-stretch` + `h-full flex flex-col` on cards for equal height.
 
-## Footer
+## Dark Mode
 
-- Top CTA block (centered): headline + paragraph + primary button
-- Below: 3‑column link grid + left brand column with a short description and social icons row
-- Bottom legal block: centered, two lines of muted text
+- Use the same semantic tokens (`bg-card`, `text-text`, etc.)
+- Dark mode colors are automatically swapped via CSS variables
+- **Do not** hardcode colors; always use tokens
+- Test both themes for contrast and readability
 
-## Do / Don’t
+## Accessibility
 
-- Do: use `border-border` and CSS tokenized colors; prefer `bg-card`/`bg-panel` over hex
-- Do: keep section paddings and max‑width consistent
-- Don’t: use `border-white`, fixed hex colors, or large shadow glows
-- Don’t: introduce new icon libraries; stick to FontAwesome
+- **Focus rings:** Always visible (3px accent outline, 63% opacity)
+- **Tap targets:** Minimum 44px height for buttons
+- **Contrast:** All text meets WCAG AA (body 4.5:1, headings 4.5:1, critical UI 7:1)
+- **Icons:** Include `aria-label` for icon-only buttons
+- **Navigation:** Use semantic HTML (`<nav>`, `<section>`, `<header>`, `<footer>`)
+
+## Do / Don't
+
+### ✅ Do
+
+- Use warm colors from the palette (ember, saffron, beeswax)
+- Use `font-semibold` for emphasis in lists and cards
+- Keep focus rings visible (63% opacity accent yellow)
+- Use 2px top borders on hero cards (accent color)
+- Use `bg-soft/60` for subtle background panels
+- Use `<span>` instead of `<div>` inside buttons
+- Use deterministic data (avoid `Math.random()` for SSR components)
+
+### ❌ Don't
+
+- Don't use cold blues or grays (ruins the warm palette)
+- Don't use `<div>` or `<p>` inside `<button>` elements (hydration errors)
+- Don't hardcode hex colors (always use Tailwind tokens)
+- Don't use heavy shadows or glows (subtle is better)
+- Don't make the header sticky unless requested
+- Don't skip focus states (accessibility requirement)
+- Don't use `Math.random()` in components that SSR (hydration mismatch)
+
+## Performance
+
+- Keep animations simple (0.2–0.3s transitions)
+- Lazy-load heavy components below the fold
+- Use Next.js Image optimization for all images
+- Static generation (SSG) for calendar pages where possible
+- Avoid layout shift: reserve ad/content heights
 
 ---
 
-When in doubt, copy an existing recipe from `Header.tsx`, `Hero.tsx`, `HowItWorks.tsx`, `FeaturedTemplates.tsx`, or `Footer.tsx` and adjust content, not styling.
+## File References
 
+When building new features, reference these existing patterns:
 
+- **Hero cards:** `src/components/TodayCard.tsx`, `src/components/UpcomingDates.tsx`
+- **Navigation:** `src/components/Header.tsx`, `src/components/Footer.tsx`
+- **Calendar grids:** `src/components/CalendarPreview.tsx`
+- **Category pages:** `src/app/imen-den/[category]/page.tsx`
+- **Year pages:** `src/app/kalendar/tsarkoven/[year]/page.tsx`
+- **Color system:** `src/app/globals.css`, `tailwind.config.ts`
+
+Copy component patterns, not just styles. Consistency > creativity.

@@ -1,0 +1,379 @@
+{
+  "type": "lunen",
+  "year": 2025,
+  "totalPhases": 52,
+  "months": [
+    {
+      "month": 1,
+      "phases": [
+        {
+          "dateTime": "2025-01-06T20:56:00+02:00",
+          "phase": "firstQuarter",
+          "icsUrl": "/api/ics/lunar/2025-01-06-firstquarter"
+        },
+        {
+          "dateTime": "2025-01-13T23:27:00+02:00",
+          "phase": "full",
+          "icsUrl": "/api/ics/lunar/2025-01-13-full"
+        },
+        {
+          "dateTime": "2025-01-21T21:31:00+02:00",
+          "phase": "lastQuarter",
+          "icsUrl": "/api/ics/lunar/2025-01-21-lastquarter"
+        },
+        {
+          "dateTime": "2025-01-29T13:36:00+02:00",
+          "phase": "new",
+          "icsUrl": "/api/ics/lunar/2025-01-29-new"
+        }
+      ],
+      "monthUrls": {
+        "page": "/kalendar/lunen/2025/01",
+        "ics": "/api/ics/lunar/2025-01",
+        "csv": "/api/export/lunar/2025-01.csv"
+      }
+    },
+    {
+      "month": 2,
+      "phases": [
+        {
+          "dateTime": "2025-02-05T09:02:00+02:00",
+          "phase": "firstQuarter",
+          "icsUrl": "/api/ics/lunar/2025-02-05-firstquarter"
+        },
+        {
+          "dateTime": "2025-02-12T15:53:00+02:00",
+          "phase": "full",
+          "icsUrl": "/api/ics/lunar/2025-02-12-full"
+        },
+        {
+          "dateTime": "2025-02-20T18:33:00+02:00",
+          "phase": "lastQuarter",
+          "icsUrl": "/api/ics/lunar/2025-02-20-lastquarter"
+        },
+        {
+          "dateTime": "2025-02-28T02:45:00+02:00",
+          "phase": "new",
+          "icsUrl": "/api/ics/lunar/2025-02-28-new"
+        }
+      ],
+      "monthUrls": {
+        "page": "/kalendar/lunen/2025/02",
+        "ics": "/api/ics/lunar/2025-02",
+        "csv": "/api/export/lunar/2025-02.csv"
+      }
+    },
+    {
+      "month": 3,
+      "phases": [
+        {
+          "dateTime": "2025-03-06T18:32:00+02:00",
+          "phase": "firstQuarter",
+          "icsUrl": "/api/ics/lunar/2025-03-06-firstquarter"
+        },
+        {
+          "dateTime": "2025-03-14T08:54:00+02:00",
+          "phase": "full",
+          "icsUrl": "/api/ics/lunar/2025-03-14-full"
+        },
+        {
+          "dateTime": "2025-03-22T13:30:00+02:00",
+          "phase": "lastQuarter",
+          "icsUrl": "/api/ics/lunar/2025-03-22-lastquarter"
+        },
+        {
+          "dateTime": "2025-03-29T12:58:00+03:00",
+          "phase": "new",
+          "icsUrl": "/api/ics/lunar/2025-03-29-new"
+        }
+      ],
+      "monthUrls": {
+        "page": "/kalendar/lunen/2025/03",
+        "ics": "/api/ics/lunar/2025-03",
+        "csv": "/api/export/lunar/2025-03.csv"
+      }
+    },
+    {
+      "month": 4,
+      "phases": [
+        {
+          "dateTime": "2025-04-05T05:15:00+03:00",
+          "phase": "firstQuarter",
+          "icsUrl": "/api/ics/lunar/2025-04-05-firstquarter"
+        },
+        {
+          "dateTime": "2025-04-13T03:22:00+03:00",
+          "phase": "full",
+          "icsUrl": "/api/ics/lunar/2025-04-13-full"
+        },
+        {
+          "dateTime": "2025-04-20T21:36:00+03:00",
+          "phase": "lastQuarter",
+          "icsUrl": "/api/ics/lunar/2025-04-20-lastquarter"
+        },
+        {
+          "dateTime": "2025-04-27T21:31:00+03:00",
+          "phase": "new",
+          "icsUrl": "/api/ics/lunar/2025-04-27-new"
+        }
+      ],
+      "monthUrls": {
+        "page": "/kalendar/lunen/2025/04",
+        "ics": "/api/ics/lunar/2025-04",
+        "csv": "/api/export/lunar/2025-04.csv"
+      }
+    },
+    {
+      "month": 5,
+      "phases": [
+        {
+          "dateTime": "2025-05-04T15:52:00+03:00",
+          "phase": "firstQuarter",
+          "icsUrl": "/api/ics/lunar/2025-05-04-firstquarter"
+        },
+        {
+          "dateTime": "2025-05-12T19:56:00+03:00",
+          "phase": "full",
+          "icsUrl": "/api/ics/lunar/2025-05-12-full"
+        },
+        {
+          "dateTime": "2025-05-20T14:59:00+03:00",
+          "phase": "lastQuarter",
+          "icsUrl": "/api/ics/lunar/2025-05-20-lastquarter"
+        },
+        {
+          "dateTime": "2025-05-27T06:02:00+03:00",
+          "phase": "new",
+          "icsUrl": "/api/ics/lunar/2025-05-27-new"
+        }
+      ],
+      "monthUrls": {
+        "page": "/kalendar/lunen/2025/05",
+        "ics": "/api/ics/lunar/2025-05",
+        "csv": "/api/export/lunar/2025-05.csv"
+      }
+    },
+    {
+      "month": 6,
+      "phases": [
+        {
+          "dateTime": "2025-06-03T02:41:00+03:00",
+          "phase": "firstQuarter",
+          "icsUrl": "/api/ics/lunar/2025-06-03-firstquarter"
+        },
+        {
+          "dateTime": "2025-06-11T10:44:00+03:00",
+          "phase": "full",
+          "icsUrl": "/api/ics/lunar/2025-06-11-full"
+        },
+        {
+          "dateTime": "2025-06-19T01:19:00+03:00",
+          "phase": "lastQuarter",
+          "icsUrl": "/api/ics/lunar/2025-06-19-lastquarter"
+        },
+        {
+          "dateTime": "2025-06-25T13:31:00+03:00",
+          "phase": "new",
+          "icsUrl": "/api/ics/lunar/2025-06-25-new"
+        }
+      ],
+      "monthUrls": {
+        "page": "/kalendar/lunen/2025/06",
+        "ics": "/api/ics/lunar/2025-06",
+        "csv": "/api/export/lunar/2025-06.csv"
+      }
+    },
+    {
+      "month": 7,
+      "phases": [
+        {
+          "dateTime": "2025-07-02T22:30:00+03:00",
+          "phase": "firstQuarter",
+          "icsUrl": "/api/ics/lunar/2025-07-02-firstquarter"
+        },
+        {
+          "dateTime": "2025-07-10T23:37:00+03:00",
+          "phase": "full",
+          "icsUrl": "/api/ics/lunar/2025-07-10-full"
+        },
+        {
+          "dateTime": "2025-07-18T02:38:00+03:00",
+          "phase": "lastQuarter",
+          "icsUrl": "/api/ics/lunar/2025-07-18-lastquarter"
+        },
+        {
+          "dateTime": "2025-07-24T22:11:00+03:00",
+          "phase": "new",
+          "icsUrl": "/api/ics/lunar/2025-07-24-new"
+        }
+      ],
+      "monthUrls": {
+        "page": "/kalendar/lunen/2025/07",
+        "ics": "/api/ics/lunar/2025-07",
+        "csv": "/api/export/lunar/2025-07.csv"
+      }
+    },
+    {
+      "month": 8,
+      "phases": [
+        {
+          "dateTime": "2025-08-01T15:41:00+03:00",
+          "phase": "firstQuarter",
+          "icsUrl": "/api/ics/lunar/2025-08-01-firstquarter"
+        },
+        {
+          "dateTime": "2025-08-09T10:55:00+03:00",
+          "phase": "full",
+          "icsUrl": "/api/ics/lunar/2025-08-09-full"
+        },
+        {
+          "dateTime": "2025-08-16T08:12:00+03:00",
+          "phase": "lastQuarter",
+          "icsUrl": "/api/ics/lunar/2025-08-16-lastquarter"
+        },
+        {
+          "dateTime": "2025-08-23T09:06:00+03:00",
+          "phase": "new",
+          "icsUrl": "/api/ics/lunar/2025-08-23-new"
+        },
+        {
+          "dateTime": "2025-08-31T04:25:00+03:00",
+          "phase": "firstQuarter",
+          "icsUrl": "/api/ics/lunar/2025-08-31-firstquarter"
+        }
+      ],
+      "monthUrls": {
+        "page": "/kalendar/lunen/2025/08",
+        "ics": "/api/ics/lunar/2025-08",
+        "csv": "/api/export/lunar/2025-08.csv"
+      }
+    },
+    {
+      "month": 9,
+      "phases": [
+        {
+          "dateTime": "2025-09-07T21:09:00+03:00",
+          "phase": "full",
+          "icsUrl": "/api/ics/lunar/2025-09-07-full"
+        },
+        {
+          "dateTime": "2025-09-15T03:33:00+03:00",
+          "phase": "lastQuarter",
+          "icsUrl": "/api/ics/lunar/2025-09-15-lastquarter"
+        },
+        {
+          "dateTime": "2025-09-21T22:54:00+03:00",
+          "phase": "new",
+          "icsUrl": "/api/ics/lunar/2025-09-21-new"
+        },
+        {
+          "dateTime": "2025-09-29T12:54:00+03:00",
+          "phase": "firstQuarter",
+          "icsUrl": "/api/ics/lunar/2025-09-29-firstquarter"
+        }
+      ],
+      "monthUrls": {
+        "page": "/kalendar/lunen/2025/09",
+        "ics": "/api/ics/lunar/2025-09",
+        "csv": "/api/export/lunar/2025-09.csv"
+      }
+    },
+    {
+      "month": 10,
+      "phases": [
+        {
+          "dateTime": "2025-10-07T06:48:00+03:00",
+          "phase": "full",
+          "icsUrl": "/api/ics/lunar/2025-10-07-full"
+        },
+        {
+          "dateTime": "2025-10-14T21:13:00+03:00",
+          "phase": "lastQuarter",
+          "icsUrl": "/api/ics/lunar/2025-10-14-lastquarter"
+        },
+        {
+          "dateTime": "2025-10-21T15:25:00+03:00",
+          "phase": "new",
+          "icsUrl": "/api/ics/lunar/2025-10-21-new"
+        },
+        {
+          "dateTime": "2025-10-28T23:16:00+03:00",
+          "phase": "firstQuarter",
+          "icsUrl": "/api/ics/lunar/2025-10-28-firstquarter"
+        }
+      ],
+      "monthUrls": {
+        "page": "/kalendar/lunen/2025/10",
+        "ics": "/api/ics/lunar/2025-10",
+        "csv": "/api/export/lunar/2025-10.csv"
+      }
+    },
+    {
+      "month": 11,
+      "phases": [
+        {
+          "dateTime": "2025-11-05T16:19:00+02:00",
+          "phase": "full",
+          "icsUrl": "/api/ics/lunar/2025-11-05-full"
+        },
+        {
+          "dateTime": "2025-11-13T07:28:00+02:00",
+          "phase": "lastQuarter",
+          "icsUrl": "/api/ics/lunar/2025-11-13-lastquarter"
+        },
+        {
+          "dateTime": "2025-11-20T08:47:00+02:00",
+          "phase": "new",
+          "icsUrl": "/api/ics/lunar/2025-11-20-new"
+        },
+        {
+          "dateTime": "2025-11-27T11:33:00+02:00",
+          "phase": "firstQuarter",
+          "icsUrl": "/api/ics/lunar/2025-11-27-firstquarter"
+        }
+      ],
+      "monthUrls": {
+        "page": "/kalendar/lunen/2025/11",
+        "ics": "/api/ics/lunar/2025-11",
+        "csv": "/api/export/lunar/2025-11.csv"
+      }
+    },
+    {
+      "month": 12,
+      "phases": [
+        {
+          "dateTime": "2025-12-05T02:14:00+02:00",
+          "phase": "full",
+          "icsUrl": "/api/ics/lunar/2025-12-05-full"
+        },
+        {
+          "dateTime": "2025-12-12T22:52:00+02:00",
+          "phase": "lastQuarter",
+          "icsUrl": "/api/ics/lunar/2025-12-12-lastquarter"
+        },
+        {
+          "dateTime": "2025-12-20T03:43:00+02:00",
+          "phase": "new",
+          "icsUrl": "/api/ics/lunar/2025-12-20-new"
+        },
+        {
+          "dateTime": "2025-12-27T02:09:00+02:00",
+          "phase": "firstQuarter",
+          "icsUrl": "/api/ics/lunar/2025-12-27-firstquarter"
+        }
+      ],
+      "monthUrls": {
+        "page": "/kalendar/lunen/2025/12",
+        "ics": "/api/ics/lunar/2025-12",
+        "csv": "/api/export/lunar/2025-12.csv"
+      }
+    }
+  ],
+  "downloads": {
+    "icsYearUrl": "/api/ics/lunar/2025",
+    "csvUrl": "/api/export/lunar/2025.csv",
+    "jsonUrl": "/api/export/lunar/2025.json",
+    "pdfUrl": "/api/export/lunar/2025.pdf"
+  }
+}
+

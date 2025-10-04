@@ -1,0 +1,521 @@
+{
+  "type": "formula-1",
+  "year": 2025,
+  "totalRounds": 24,
+  "rounds": [
+    {
+      "round": 1,
+      "gp": "Bahrain Grand Prix",
+      "country": "Бахрейн",
+      "circuit": "Bahrain International Circuit, Sakhir",
+      "quali": {
+        "dateTime": "2025-03-15T18:00:00+02:00"
+      },
+      "race": {
+        "dateTime": "2025-03-16T18:00:00+02:00",
+        "laps": 57,
+        "isNight": true,
+        "hasSprint": false
+      },
+      "tv": [
+        { "provider": "Diema Sport", "url": "#" },
+        { "provider": "F1 TV Pro", "url": "https://f1tv.formula1.com" }
+      ],
+      "icsUrls": {
+        "quali": "/api/ics/f1/2025-r01-quali",
+        "race": "/api/ics/f1/2025-r01-race"
+      }
+    },
+    {
+      "round": 2,
+      "gp": "Saudi Arabian Grand Prix",
+      "country": "Саудитска Арабия",
+      "circuit": "Jeddah Corniche Circuit, Jeddah",
+      "quali": {
+        "dateTime": "2025-03-22T20:00:00+02:00"
+      },
+      "race": {
+        "dateTime": "2025-03-23T21:00:00+02:00",
+        "laps": 50,
+        "isNight": true,
+        "hasSprint": false
+      },
+      "tv": [
+        { "provider": "Diema Sport" }
+      ],
+      "icsUrls": {
+        "quali": "/api/ics/f1/2025-r02-quali",
+        "race": "/api/ics/f1/2025-r02-race"
+      }
+    },
+    {
+      "round": 3,
+      "gp": "Australian Grand Prix",
+      "country": "Австралия",
+      "circuit": "Albert Park Circuit, Melbourne",
+      "quali": {
+        "dateTime": "2025-04-05T09:00:00+03:00"
+      },
+      "race": {
+        "dateTime": "2025-04-06T08:00:00+03:00",
+        "laps": 58,
+        "isNight": false,
+        "hasSprint": false
+      },
+      "tv": [
+        { "provider": "Diema Sport" }
+      ],
+      "icsUrls": {
+        "quali": "/api/ics/f1/2025-r03-quali",
+        "race": "/api/ics/f1/2025-r03-race"
+      }
+    },
+    {
+      "round": 4,
+      "gp": "Chinese Grand Prix",
+      "country": "Китай",
+      "circuit": "Shanghai International Circuit, Shanghai",
+      "quali": {
+        "dateTime": "2025-04-19T10:00:00+03:00"
+      },
+      "race": {
+        "dateTime": "2025-04-20T10:00:00+03:00",
+        "laps": 56,
+        "isNight": false,
+        "hasSprint": true
+      },
+      "tv": [
+        { "provider": "Diema Sport" }
+      ],
+      "icsUrls": {
+        "quali": "/api/ics/f1/2025-r04-quali",
+        "race": "/api/ics/f1/2025-r04-race"
+      }
+    },
+    {
+      "round": 5,
+      "gp": "Miami Grand Prix",
+      "country": "САЩ",
+      "circuit": "Miami International Autodrome, Miami",
+      "quali": {
+        "dateTime": "2025-05-03T23:00:00+03:00"
+      },
+      "race": {
+        "dateTime": "2025-05-04T22:30:00+03:00",
+        "laps": 57,
+        "isNight": false,
+        "hasSprint": true
+      },
+      "tv": [
+        { "provider": "Diema Sport" }
+      ],
+      "icsUrls": {
+        "quali": "/api/ics/f1/2025-r05-quali",
+        "race": "/api/ics/f1/2025-r05-race"
+      }
+    },
+    {
+      "round": 6,
+      "gp": "Emilia Romagna Grand Prix",
+      "country": "Италия",
+      "circuit": "Autodromo Enzo e Dino Ferrari, Imola",
+      "quali": {
+        "dateTime": "2025-05-17T17:00:00+03:00"
+      },
+      "race": {
+        "dateTime": "2025-05-18T16:00:00+03:00",
+        "laps": 63,
+        "isNight": false,
+        "hasSprint": false
+      },
+      "tv": [
+        { "provider": "Diema Sport" }
+      ],
+      "icsUrls": {
+        "quali": "/api/ics/f1/2025-r06-quali",
+        "race": "/api/ics/f1/2025-r06-race"
+      }
+    },
+    {
+      "round": 7,
+      "gp": "Monaco Grand Prix",
+      "country": "Монако",
+      "circuit": "Circuit de Monaco, Monte Carlo",
+      "quali": {
+        "dateTime": "2025-05-24T17:00:00+03:00"
+      },
+      "race": {
+        "dateTime": "2025-05-25T16:00:00+03:00",
+        "laps": 78,
+        "isNight": false,
+        "hasSprint": false
+      },
+      "tv": [
+        { "provider": "Diema Sport" }
+      ],
+      "icsUrls": {
+        "quali": "/api/ics/f1/2025-r07-quali",
+        "race": "/api/ics/f1/2025-r07-race"
+      }
+    },
+    {
+      "round": 8,
+      "gp": "Spanish Grand Prix",
+      "country": "Испания",
+      "circuit": "Circuit de Barcelona-Catalunya, Barcelona",
+      "quali": {
+        "dateTime": "2025-06-07T17:00:00+03:00"
+      },
+      "race": {
+        "dateTime": "2025-06-08T16:00:00+03:00",
+        "laps": 66,
+        "isNight": false,
+        "hasSprint": false
+      },
+      "tv": [
+        { "provider": "Diema Sport" }
+      ],
+      "icsUrls": {
+        "quali": "/api/ics/f1/2025-r08-quali",
+        "race": "/api/ics/f1/2025-r08-race"
+      }
+    },
+    {
+      "round": 9,
+      "gp": "Canadian Grand Prix",
+      "country": "Канада",
+      "circuit": "Circuit Gilles-Villeneuve, Montreal",
+      "quali": {
+        "dateTime": "2025-06-14T23:00:00+03:00"
+      },
+      "race": {
+        "dateTime": "2025-06-15T21:00:00+03:00",
+        "laps": 70,
+        "isNight": false,
+        "hasSprint": false
+      },
+      "tv": [
+        { "provider": "Diema Sport" }
+      ],
+      "icsUrls": {
+        "quali": "/api/ics/f1/2025-r09-quali",
+        "race": "/api/ics/f1/2025-r09-race"
+      }
+    },
+    {
+      "round": 10,
+      "gp": "Austrian Grand Prix",
+      "country": "Австрия",
+      "circuit": "Red Bull Ring, Spielberg",
+      "quali": {
+        "dateTime": "2025-06-28T17:00:00+03:00"
+      },
+      "race": {
+        "dateTime": "2025-06-29T16:00:00+03:00",
+        "laps": 71,
+        "isNight": false,
+        "hasSprint": true
+      },
+      "tv": [
+        { "provider": "Diema Sport" }
+      ],
+      "icsUrls": {
+        "quali": "/api/ics/f1/2025-r10-quali",
+        "race": "/api/ics/f1/2025-r10-race"
+      }
+    },
+    {
+      "round": 11,
+      "gp": "British Grand Prix",
+      "country": "Великобритания",
+      "circuit": "Silverstone Circuit, Silverstone",
+      "quali": {
+        "dateTime": "2025-07-05T18:00:00+03:00"
+      },
+      "race": {
+        "dateTime": "2025-07-06T17:00:00+03:00",
+        "laps": 52,
+        "isNight": false,
+        "hasSprint": false
+      },
+      "tv": [
+        { "provider": "Diema Sport" }
+      ],
+      "icsUrls": {
+        "quali": "/api/ics/f1/2025-r11-quali",
+        "race": "/api/ics/f1/2025-r11-race"
+      }
+    },
+    {
+      "round": 12,
+      "gp": "Belgian Grand Prix",
+      "country": "Белгия",
+      "circuit": "Circuit de Spa-Francorchamps, Spa",
+      "quali": {
+        "dateTime": "2025-07-26T17:00:00+03:00"
+      },
+      "race": {
+        "dateTime": "2025-07-27T16:00:00+03:00",
+        "laps": 44,
+        "isNight": false,
+        "hasSprint": false
+      },
+      "tv": [
+        { "provider": "Diema Sport" }
+      ],
+      "icsUrls": {
+        "quali": "/api/ics/f1/2025-r12-quali",
+        "race": "/api/ics/f1/2025-r12-race"
+      }
+    },
+    {
+      "round": 13,
+      "gp": "Hungarian Grand Prix",
+      "country": "Унгария",
+      "circuit": "Hungaroring, Budapest",
+      "quali": {
+        "dateTime": "2025-08-02T17:00:00+03:00"
+      },
+      "race": {
+        "dateTime": "2025-08-03T16:00:00+03:00",
+        "laps": 70,
+        "isNight": false,
+        "hasSprint": false
+      },
+      "tv": [
+        { "provider": "Diema Sport" }
+      ],
+      "icsUrls": {
+        "quali": "/api/ics/f1/2025-r13-quali",
+        "race": "/api/ics/f1/2025-r13-race"
+      }
+    },
+    {
+      "round": 14,
+      "gp": "Dutch Grand Prix",
+      "country": "Холандия",
+      "circuit": "Circuit Zandvoort, Zandvoort",
+      "quali": {
+        "dateTime": "2025-08-30T17:00:00+03:00"
+      },
+      "race": {
+        "dateTime": "2025-08-31T16:00:00+03:00",
+        "laps": 72,
+        "isNight": false,
+        "hasSprint": false
+      },
+      "tv": [
+        { "provider": "Diema Sport" }
+      ],
+      "icsUrls": {
+        "quali": "/api/ics/f1/2025-r14-quali",
+        "race": "/api/ics/f1/2025-r14-race"
+      }
+    },
+    {
+      "round": 15,
+      "gp": "Italian Grand Prix",
+      "country": "Италия",
+      "circuit": "Autodromo Nazionale di Monza, Monza",
+      "quali": {
+        "dateTime": "2025-09-06T17:00:00+03:00"
+      },
+      "race": {
+        "dateTime": "2025-09-07T16:00:00+03:00",
+        "laps": 53,
+        "isNight": false,
+        "hasSprint": false
+      },
+      "tv": [
+        { "provider": "Diema Sport" }
+      ],
+      "icsUrls": {
+        "quali": "/api/ics/f1/2025-r15-quali",
+        "race": "/api/ics/f1/2025-r15-race"
+      }
+    },
+    {
+      "round": 16,
+      "gp": "Azerbaijan Grand Prix",
+      "country": "Азербайджан",
+      "circuit": "Baku City Circuit, Baku",
+      "quali": {
+        "dateTime": "2025-09-20T16:00:00+03:00"
+      },
+      "race": {
+        "dateTime": "2025-09-21T15:00:00+03:00",
+        "laps": 51,
+        "isNight": false,
+        "hasSprint": false
+      },
+      "tv": [
+        { "provider": "Diema Sport" }
+      ],
+      "icsUrls": {
+        "quali": "/api/ics/f1/2025-r16-quali",
+        "race": "/api/ics/f1/2025-r16-race"
+      }
+    },
+    {
+      "round": 17,
+      "gp": "Singapore Grand Prix",
+      "country": "Сингапур",
+      "circuit": "Marina Bay Street Circuit, Singapore",
+      "quali": {
+        "dateTime": "2025-10-04T17:00:00+03:00"
+      },
+      "race": {
+        "dateTime": "2025-10-05T15:00:00+03:00",
+        "laps": 62,
+        "isNight": true,
+        "hasSprint": false
+      },
+      "tv": [
+        { "provider": "Diema Sport" }
+      ],
+      "icsUrls": {
+        "quali": "/api/ics/f1/2025-r17-quali",
+        "race": "/api/ics/f1/2025-r17-race"
+      }
+    },
+    {
+      "round": 18,
+      "gp": "United States Grand Prix",
+      "country": "САЩ",
+      "circuit": "Circuit of the Americas, Austin",
+      "quali": {
+        "dateTime": "2025-10-19T00:00:00+03:00"
+      },
+      "race": {
+        "dateTime": "2025-10-19T22:00:00+03:00",
+        "laps": 56,
+        "isNight": false,
+        "hasSprint": true
+      },
+      "tv": [
+        { "provider": "Diema Sport" }
+      ],
+      "icsUrls": {
+        "quali": "/api/ics/f1/2025-r18-quali",
+        "race": "/api/ics/f1/2025-r18-race"
+      }
+    },
+    {
+      "round": 19,
+      "gp": "Mexico City Grand Prix",
+      "country": "Мексико",
+      "circuit": "Autódromo Hermanos Rodríguez, Mexico City",
+      "quali": {
+        "dateTime": "2025-10-25T23:00:00+03:00"
+      },
+      "race": {
+        "dateTime": "2025-10-26T22:00:00+03:00",
+        "laps": 71,
+        "isNight": false,
+        "hasSprint": false
+      },
+      "tv": [
+        { "provider": "Diema Sport" }
+      ],
+      "icsUrls": {
+        "quali": "/api/ics/f1/2025-r19-quali",
+        "race": "/api/ics/f1/2025-r19-race"
+      }
+    },
+    {
+      "round": 20,
+      "gp": "São Paulo Grand Prix",
+      "country": "Бразилия",
+      "circuit": "Autódromo José Carlos Pace, Interlagos",
+      "quali": {
+        "dateTime": "2025-11-08T21:00:00+02:00"
+      },
+      "race": {
+        "dateTime": "2025-11-09T20:00:00+02:00",
+        "laps": 71,
+        "isNight": false,
+        "hasSprint": true
+      },
+      "tv": [
+        { "provider": "Diema Sport" }
+      ],
+      "icsUrls": {
+        "quali": "/api/ics/f1/2025-r20-quali",
+        "race": "/api/ics/f1/2025-r20-race"
+      }
+    },
+    {
+      "round": 21,
+      "gp": "Las Vegas Grand Prix",
+      "country": "САЩ",
+      "circuit": "Las Vegas Street Circuit, Las Vegas",
+      "quali": {
+        "dateTime": "2025-11-23T09:00:00+02:00"
+      },
+      "race": {
+        "dateTime": "2025-11-23T08:00:00+02:00",
+        "laps": 50,
+        "isNight": true,
+        "hasSprint": false
+      },
+      "tv": [
+        { "provider": "Diema Sport" }
+      ],
+      "icsUrls": {
+        "quali": "/api/ics/f1/2025-r21-quali",
+        "race": "/api/ics/f1/2025-r21-race"
+      }
+    },
+    {
+      "round": 22,
+      "gp": "Qatar Grand Prix",
+      "country": "Катар",
+      "circuit": "Lusail International Circuit, Lusail",
+      "quali": {
+        "dateTime": "2025-11-29T19:00:00+02:00"
+      },
+      "race": {
+        "dateTime": "2025-11-30T19:00:00+02:00",
+        "laps": 57,
+        "isNight": true,
+        "hasSprint": true
+      },
+      "tv": [
+        { "provider": "Diema Sport" }
+      ],
+      "icsUrls": {
+        "quali": "/api/ics/f1/2025-r22-quali",
+        "race": "/api/ics/f1/2025-r22-race"
+      }
+    },
+    {
+      "round": 23,
+      "gp": "Abu Dhabi Grand Prix",
+      "country": "ОАЕ",
+      "circuit": "Yas Marina Circuit, Abu Dhabi",
+      "quali": {
+        "dateTime": "2025-12-06T17:00:00+02:00"
+      },
+      "race": {
+        "dateTime": "2025-12-07T16:00:00+02:00",
+        "laps": 58,
+        "isNight": true,
+        "hasSprint": false
+      },
+      "tv": [
+        { "provider": "Diema Sport" }
+      ],
+      "icsUrls": {
+        "quali": "/api/ics/f1/2025-r23-quali",
+        "race": "/api/ics/f1/2025-r23-race"
+      }
+    }
+  ],
+  "downloads": {
+    "icsSeasonUrl": "/api/ics/f1/2025-season",
+    "csvUrl": "/api/export/f1/2025.csv",
+    "jsonUrl": "/api/export/f1/2025.json",
+    "pdfUrl": "/api/export/f1/2025.pdf"
+  }
+}
+

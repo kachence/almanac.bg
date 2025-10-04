@@ -13,7 +13,7 @@
   --border-light: #F2E6D7;
   --border-strong-light: #CBBEAF;
   --text-light: #1F1915;
-  --muted-light: #8A7B6E;
+  --muted-light: #7A6B5E;
   --muted-strong-light: #6B5E55;
   
   /* Brand colors - Light */
@@ -141,10 +141,13 @@
   
   --info: var(--info-dark);
   --info-bg: var(--info-bg-dark);
+  --info-border: var(--info-border-dark);
   --warning: var(--warning-dark);
   --warning-bg: var(--warning-bg-dark);
+  --warning-border: var(--warning-border-dark);
   --success: var(--success-dark);
   --success-bg: var(--success-bg-dark);
+  --success-border: var(--success-border-dark);
   
   --primary-rgb: var(--primary-rgb-dark);
   --accent-rgb: var(--accent-rgb-dark);
@@ -189,10 +192,13 @@
   
   --info: var(--info-light);
   --info-bg: var(--info-bg-light);
+  --info-border: var(--info-border-light);
   --warning: var(--warning-light);
   --warning-bg: var(--warning-bg-light);
+  --warning-border: var(--warning-border-light);
   --success: var(--success-light);
   --success-bg: var(--success-bg-light);
+  --success-border: var(--success-border-light);
   
   --primary-rgb: var(--primary-rgb-light);
   --accent-rgb: var(--accent-rgb-light);
@@ -238,10 +244,13 @@
   
   --info: var(--info-dark);
   --info-bg: var(--info-bg-dark);
+  --info-border: var(--info-border-dark);
   --warning: var(--warning-dark);
   --warning-bg: var(--warning-bg-dark);
+  --warning-border: var(--warning-border-dark);
   --success: var(--success-dark);
   --success-bg: var(--success-bg-dark);
+  --success-border: var(--success-border-dark);
   
   --primary-rgb: var(--primary-rgb-dark);
   --accent-rgb: var(--accent-rgb-dark);

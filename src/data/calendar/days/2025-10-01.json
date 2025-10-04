@@ -1,0 +1,125 @@
+{
+  "date": "2025-10-01",
+  "year": 2025,
+  "month": 10,
+  "day": 1,
+  "weekday": "Wednesday",
+  "weekdayName": "сряда",
+  "weekdayNameFull": "Сряда",
+  "isToday": false,
+  "isWeekend": false,
+  "isNonWorking": false,
+  "weekNumber": 40,
+  "dayOfYear": 274,
+  "formattedDate": "сряда, 1 октомври 2025",
+  "namedays": [],
+  "greetings": [],
+  "holidays": [
+    {
+      "title": "Международен ден на възрастните хора",
+      "slug": "mezhdunaroden-den-na-vazrastnite",
+      "type": "Чуждестранен",
+      "isOfficial": false,
+      "movable": false
+    }
+  ],
+  "church": [
+    {
+      "title": "Св. Роман Сладкопевец",
+      "slug": "sv-roman-sladkopevets",
+      "type": "Църковен",
+      "isOfficial": false,
+      "movable": false
+    }
+  ],
+  "lunar": {
+    "phase": "Растяща луна",
+    "phaseKey": "waxing",
+    "illumination": 32,
+    "nextPhase": {
+      "phase": "Първа четвърт",
+      "dateTime": "2025-10-03T21:42:00+03:00",
+      "date": "2025-10-03"
+    },
+    "prevPhase": {
+      "phase": "Новолуние",
+      "dateTime": "2025-09-21T22:54:00+03:00",
+      "date": "2025-09-21"
+    }
+  },
+  "solar": {
+    "city": "София",
+    "citySlug": "sofia",
+    "lat": 42.6977,
+    "lon": 23.3219,
+    "sunrise": "07:19",
+    "sunset": "18:56",
+    "dayLength": "11ч 37м",
+    "civilTwilightStart": "06:50",
+    "civilTwilightEnd": "19:25",
+    "solarNoon": "13:07",
+    "availableCities": [
+      { "name": "София", "slug": "sofia" },
+      { "name": "Пловдив", "slug": "plovdiv" },
+      { "name": "Варна", "slug": "varna" },
+      { "name": "Бургас", "slug": "burgas" },
+      { "name": "Русе", "slug": "ruse" }
+    ]
+  },
+  "timeline": [
+    { "time": "00:00", "event": "Начало на деня", "type": "day", "icon": "🕛" },
+    { "time": "06:50", "event": "Гражданско зазоряване", "type": "solar", "icon": "🌅" },
+    { "time": "07:19", "event": "Изгрев", "type": "solar", "icon": "☀️" },
+    { "time": "13:07", "event": "Слънчев пладен", "type": "solar", "icon": "☀️" },
+    { "time": "18:56", "event": "Залез", "type": "solar", "icon": "🌇" },
+    { "time": "19:25", "event": "Гражданско здрачаване", "type": "solar", "icon": "🌆" }
+  ],
+  "nextDays": [
+    { "date": "2025-10-02", "day": 2, "weekday": "четвъртък", "summary": null },
+    { "date": "2025-10-03", "day": 3, "weekday": "петък", "summary": "Денис, Първа четвърт" },
+    { "date": "2025-10-04", "day": 4, "weekday": "събота", "summary": null },
+    { "date": "2025-10-05", "day": 5, "weekday": "неделя", "summary": null },
+    { "date": "2025-10-06", "day": 6, "weekday": "понеделник", "summary": "Тома, Томислав" },
+    { "date": "2025-10-07", "day": 7, "weekday": "вторник", "summary": "Пълнолуние" },
+    { "date": "2025-10-08", "day": 8, "weekday": "сряда", "summary": "Пелагия" }
+  ],
+  "popularThisWeek": [
+    { "name": "Денис", "slug": "denis" },
+    { "name": "Тома", "slug": "toma" },
+    { "name": "Петка", "slug": "petka" },
+    { "name": "Димитър", "slug": "dimitar" },
+    { "name": "Параскева", "slug": "paraskeva" },
+    { "name": "Йоан", "slug": "yoan" }
+  ],
+  "prevNext": {
+    "prev": {
+      "date": "2025-09-30",
+      "url": "/kalendar/2025/09/30",
+      "weekday": "вторник",
+      "summary": null
+    },
+    "next": {
+      "date": "2025-10-02",
+      "url": "/kalendar/2025/10/02",
+      "weekday": "четвъртък",
+      "summary": null
+    }
+  },
+  "links": {
+    "month": "/kalendar/2025/10",
+    "year": "/kalendar/2025",
+    "lunarMonth": "/kalendar/lunen/2025/10",
+    "solarMonth": "/kalendar/slanchev/sofia/2025/10",
+    "orthodoxYear": "/kalendar/tsarkoven/2025"
+  },
+  "downloads": {
+    "icsDayUrl": "/api/ics/day/2025-10-01",
+    "icsNamedaysUrl": "/api/ics/namedays/2025-10-01"
+  },
+  "sources": [
+    { "label": "БПЦ календар", "url": "https://bg-patriarshia.bg" },
+    { "label": "Министерски съвет", "url": "#" },
+    { "label": "Астрономически данни (NASA)", "url": "#" }
+  ]
+}
+

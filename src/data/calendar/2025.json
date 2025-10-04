@@ -1,0 +1,233 @@
+{
+  "year": 2025,
+  "totalDays": 365,
+  "isLeapYear": false,
+  "nonWorkingDaysCount": 14,
+  "monthsCount": 12,
+  "today": "2025-10-03",
+  "currentMonth": 10,
+  "months": [
+    {
+      "month": 1,
+      "name": "Януари",
+      "slug": "01",
+      "url": "/kalendar/2025/01",
+      "days": 31,
+      "signals": [
+        { "date": "2025-01-01", "type": "holiday", "title": "Нова година", "isOfficial": true },
+        { "date": "2025-01-06", "type": "church", "title": "Богоявление" },
+        { "date": "2025-01-07", "type": "nameday", "names": ["Иван", "Йоан"] },
+        { "date": "2025-01-17", "type": "nameday", "names": ["Антон", "Антоанета"] },
+        { "date": "2025-01-18", "type": "nameday", "names": ["Атанас", "Атанаска"] },
+        { "date": "2025-01-20", "type": "nameday", "names": ["Евтимий"] },
+        { "date": "2025-01-21", "type": "nameday", "names": ["Максим"] }
+      ]
+    },
+    {
+      "month": 2,
+      "name": "Февруари",
+      "slug": "02",
+      "url": "/kalendar/2025/02",
+      "days": 28,
+      "signals": [
+        { "date": "2025-02-01", "type": "nameday", "names": ["Трифон", "Трифона"] },
+        { "date": "2025-02-14", "type": "nameday", "names": ["Валентин", "Валентина"] }
+      ]
+    },
+    {
+      "month": 3,
+      "name": "Март",
+      "slug": "03",
+      "url": "/kalendar/2025/03",
+      "days": 31,
+      "signals": [
+        { "date": "2025-03-03", "type": "holiday", "title": "Освобождение на България", "isOfficial": true },
+        { "date": "2025-03-25", "type": "church", "title": "Благовещение" }
+      ]
+    },
+    {
+      "month": 4,
+      "name": "Април",
+      "slug": "04",
+      "url": "/kalendar/2025/04",
+      "days": 30,
+      "signals": [
+        { "date": "2025-04-20", "type": "holiday", "title": "Великден", "isOfficial": true, "movable": true },
+        { "date": "2025-04-21", "type": "holiday", "title": "Втори ден Великден", "isOfficial": true, "movable": true }
+      ]
+    },
+    {
+      "month": 5,
+      "name": "Май",
+      "slug": "05",
+      "url": "/kalendar/2025/05",
+      "days": 31,
+      "signals": [
+        { "date": "2025-05-01", "type": "holiday", "title": "Ден на труда", "isOfficial": true },
+        { "date": "2025-05-06", "type": "holiday", "title": "Гергьовден", "isOfficial": true },
+        { "date": "2025-05-24", "type": "holiday", "title": "Ден на Кирил и Методий", "isOfficial": true }
+      ]
+    },
+    {
+      "month": 6,
+      "name": "Юни",
+      "slug": "06",
+      "url": "/kalendar/2025/06",
+      "days": 30,
+      "signals": [
+        { "date": "2025-06-24", "type": "nameday", "names": ["Иван", "Йоан", "Еньо"] }
+      ]
+    },
+    {
+      "month": 7,
+      "name": "Юли",
+      "slug": "07",
+      "url": "/kalendar/2025/07",
+      "days": 31,
+      "signals": []
+    },
+    {
+      "month": 8,
+      "name": "Август",
+      "slug": "08",
+      "url": "/kalendar/2025/08",
+      "days": 31,
+      "signals": []
+    },
+    {
+      "month": 9,
+      "name": "Септември",
+      "slug": "09",
+      "url": "/kalendar/2025/09",
+      "days": 30,
+      "signals": [
+        { "date": "2025-09-06", "type": "holiday", "title": "Ден на Съединението", "isOfficial": true },
+        { "date": "2025-09-22", "type": "holiday", "title": "Ден на Независимостта", "isOfficial": true }
+      ]
+    },
+    {
+      "month": 10,
+      "name": "Октомври",
+      "slug": "10",
+      "url": "/kalendar/2025/10",
+      "days": 31,
+      "signals": [
+        { "date": "2025-10-03", "type": "nameday", "names": ["Денис", "Денислав"] },
+        { "date": "2025-10-06", "type": "nameday", "names": ["Тома", "Томислав"] },
+        { "date": "2025-10-14", "type": "nameday", "names": ["Петка", "Параскева"] },
+        { "date": "2025-10-19", "type": "church", "title": "Йоан Рилски" },
+        { "date": "2025-10-26", "type": "nameday", "names": ["Димитър", "Димитрина"] }
+      ]
+    },
+    {
+      "month": 11,
+      "name": "Ноември",
+      "slug": "11",
+      "url": "/kalendar/2025/11",
+      "days": 30,
+      "signals": [
+        { "date": "2025-11-01", "type": "holiday", "title": "Ден на народните будители", "isOfficial": false },
+        { "date": "2025-11-08", "type": "church", "title": "Архангеловден" }
+      ]
+    },
+    {
+      "month": 12,
+      "name": "Декември",
+      "slug": "12",
+      "url": "/kalendar/2025/12",
+      "days": 31,
+      "signals": [
+        { "date": "2025-12-06", "type": "nameday", "names": ["Никола", "Николай"] },
+        { "date": "2025-12-24", "type": "church", "title": "Бъдни вечер" },
+        { "date": "2025-12-25", "type": "holiday", "title": "Коледа", "isOfficial": true },
+        { "date": "2025-12-26", "type": "holiday", "title": "Втори ден Коледа", "isOfficial": true }
+      ]
+    }
+  ],
+  "nonWorkingDays": [
+    { "date": "2025-01-01", "title": "Нова година", "dayOfWeek": "сряда", "moved": null },
+    { "date": "2025-03-03", "title": "Ден на Освобождението", "dayOfWeek": "понеделник", "moved": null },
+    { "date": "2025-04-20", "title": "Великден", "dayOfWeek": "неделя", "moved": null, "movable": true },
+    { "date": "2025-04-21", "title": "Втори ден Великден", "dayOfWeek": "понеделник", "moved": null, "movable": true },
+    { "date": "2025-05-01", "title": "Ден на труда", "dayOfWeek": "четвъртък", "moved": null },
+    { "date": "2025-05-06", "title": "Гергьовден / Ден на храбростта", "dayOfWeek": "вторник", "moved": null },
+    { "date": "2025-05-24", "title": "Ден на Кирил и Методий", "dayOfWeek": "събота", "moved": null },
+    { "date": "2025-05-26", "title": "Почивен ден (преместен от 24 май)", "dayOfWeek": "понеделник", "moved": "Преместване от 24 май (събота)" },
+    { "date": "2025-09-06", "title": "Ден на Съединението", "dayOfWeek": "събота", "moved": null },
+    { "date": "2025-09-08", "title": "Почивен ден (преместен от 6 септември)", "dayOfWeek": "понеделник", "moved": "Преместване от 6 септември (събота)" },
+    { "date": "2025-09-22", "title": "Ден на Независимостта", "dayOfWeek": "понеделник", "moved": null },
+    { "date": "2025-12-24", "title": "Бъдни вечер", "dayOfWeek": "сряда", "moved": null },
+    { "date": "2025-12-25", "title": "Коледа", "dayOfWeek": "четвъртък", "moved": null },
+    { "date": "2025-12-26", "title": "Втори ден Коледа", "dayOfWeek": "петък", "moved": null }
+  ],
+  "namedaysByMonth": {
+    "01": [
+      { "date": "2025-01-07", "names": ["Иван", "Йоан", "Ваньо"] },
+      { "date": "2025-01-17", "names": ["Антон", "Антоанета"] },
+      { "date": "2025-01-18", "names": ["Атанас", "Атанаска"] },
+      { "date": "2025-01-20", "names": ["Евтимий"] },
+      { "date": "2025-01-21", "names": ["Максим"] }
+    ],
+    "02": [
+      { "date": "2025-02-01", "names": ["Трифон", "Трифона"] },
+      { "date": "2025-02-14", "names": ["Валентин", "Валентина"] }
+    ],
+    "10": [
+      { "date": "2025-10-03", "names": ["Денис", "Денислав", "Денислава"] },
+      { "date": "2025-10-06", "names": ["Тома", "Томислав"] },
+      { "date": "2025-10-14", "names": ["Петка", "Параскева"] },
+      { "date": "2025-10-26", "names": ["Димитър", "Димитрина", "Митко"] }
+    ]
+  },
+  "orthodoxByMonth": {
+    "01": [
+      { "date": "2025-01-01", "title": "Васильовден (Св. Василий Велики)", "movable": false },
+      { "date": "2025-01-06", "title": "Богоявление (Йордановден)", "movable": false }
+    ],
+    "03": [
+      { "date": "2025-03-25", "title": "Благовещение", "movable": false }
+    ],
+    "04": [
+      { "date": "2025-04-20", "title": "Великден (Възкресение Христово)", "movable": true },
+      { "date": "2025-04-21", "title": "Светли понеделник", "movable": true }
+    ],
+    "05": [
+      { "date": "2025-05-06", "title": "Гергьовден (Св. Георги Победоносец)", "movable": false }
+    ],
+    "12": [
+      { "date": "2025-12-06", "title": "Никулден (Св. Николай Чудотворец)", "movable": false },
+      { "date": "2025-12-25", "title": "Рождество Христово (Коледа)", "movable": false },
+      { "date": "2025-12-26", "title": "Събор на Пресвета Богородица", "movable": false }
+    ]
+  },
+  "lunarSnapshot": [
+    { "dateTime": "2025-10-07T03:47:00Z", "phase": "Пълнолуние" },
+    { "dateTime": "2025-10-13T17:13:00Z", "phase": "Последна четвърт" },
+    { "dateTime": "2025-10-21T12:25:00Z", "phase": "Новолуние" },
+    { "dateTime": "2025-10-29T08:21:00Z", "phase": "Първа четвърт" }
+  ],
+  "solarSnapshot": {
+    "city": "София",
+    "lat": 42.6977,
+    "lon": 23.3219,
+    "shortest": {
+      "date": "2025-12-21",
+      "dayLength": "9ч 1м",
+      "sunrise": "07:51",
+      "sunset": "16:52"
+    },
+    "longest": {
+      "date": "2025-06-21",
+      "dayLength": "15ч 19м",
+      "sunrise": "05:39",
+      "sunset": "20:58"
+    }
+  },
+  "downloads": {
+    "icsNonWorkingUrl": "/api/ics/non-working/2025",
+    "pdfYearUrl": "/api/pdf/year/2025",
+    "pdfMonthsZipUrl": "/api/pdf/months/2025",
+    "jsonUrl": "/api/data/year/2025.json"
+  }
+}
+

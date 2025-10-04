@@ -99,11 +99,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     ? `${primaryDate.day} ${getMonthNameGenitive(primaryDate.month)} ${primaryDate.year}`
     : 'виж дати'
 
-  return {
+    return {
     title: `Кога е имен ден на ${nameData.name}? ${dateText} | Almanac.bg`,
     description: `Имен ден на ${nameData.name}: ${dateText}. ${nameData.etymology} Вижте традиции, бързи поздрави и картички.`,
     keywords: `${nameData.name}, имен ден ${nameData.name}, ${nameData.variants.join(', ')}, ${dateText}`,
-    openGraph: {
+      openGraph: {
       title: `Имен ден на ${nameData.name} — ${dateText}`,
       description: `${nameData.etymology} Виж традиции, поздрави и картички.`,
       type: 'article',
@@ -153,7 +153,7 @@ export default async function NameDayPage({ params }: PageProps) {
       return acc
     }, {} as Record<number, NameDate[]>)
 
-  return (
+    return (
     <>
       <Header />
       <main className="min-h-screen bg-bg">
@@ -590,11 +590,11 @@ export default async function NameDayPage({ params }: PageProps) {
                   </div>
                 )}
               </aside>
-            </div>
+        </div>
           </div>
         </section>
       </main>
       <Footer />
     </>
-  )
-}
+    )
+  }

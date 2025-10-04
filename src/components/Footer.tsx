@@ -36,24 +36,7 @@ export function Footer() {
 
   return (
     <footer className="bg-bg">
-      <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
-        {/* E-E-A-T Section */}
-        <div className="py-12 lg:py-16 border-b border-border">
-          <div className="max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-text text-center mb-6">
-              Защо ни вярвате
-            </h3>
-            <p className="text-muted text-center max-w-2xl mx-auto mb-6">
-              Данните в Almanac.bg се базират на официални източници: календар на Българската православна църква (БПЦ), 
-              решения на Министерския съвет за официалните почивни дни, и алгоритъм за изчисление на подвижните 
-              православни празници според Юлианския календар.
-            </p>
-            <p className="text-sm text-muted text-center">
-              Данните се обновяват ежегодно. Моля, проверете за местни промени при официалните институции.
-            </p>
-          </div>
-        </div>
-        
+      <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">        
         <div className="pt-12 lg:pt-16 xl:grid xl:grid-cols-3 xl:gap-8">
           <div>
             <div className="flex items-center mb-4">

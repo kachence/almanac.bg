@@ -340,7 +340,7 @@ export function Header({ className }: HeaderProps) {
 
   return (
     <header className={cn(
-      "sticky top-0 z-50 transition-all duration-200",
+      "transition-all duration-200",
       scrolled 
         ? "border-b border-border bg-[color-mix(in_oklab,var(--bg),transparent_10%)]/70 backdrop-blur supports-[backdrop-filter]:bg-transparent" 
         : "border-b border-transparent bg-transparent",

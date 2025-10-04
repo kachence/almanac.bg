@@ -1,0 +1,377 @@
+{
+  "year": 2025,
+  "month": 10,
+  "monthName": "Октомври",
+  "monthNameGenitive": "октомври",
+  "daysInMonth": 31,
+  "weekendsCount": 4,
+  "nonWorkingDaysCount": 0,
+  "namedaysCount": 9,
+  "firstDayOfWeek": 2,
+  "today": "2025-10-03",
+  "days": [
+    {
+      "date": "2025-10-01",
+      "day": 1,
+      "weekday": 3,
+      "weekdayName": "сряда",
+      "isToday": false,
+      "isWeekend": false,
+      "signals": {
+        "hasNameday": true,
+        "hasHoliday": false,
+        "hasChurchHoliday": false,
+        "lunarPhase": null
+      },
+      "summary": "Роман, Романа",
+      "namedays": ["Роман", "Романа"],
+      "holidays": []
+    },
+    {
+      "date": "2025-10-02",
+      "day": 2,
+      "weekday": 4,
+      "weekdayName": "четвъртък",
+      "isToday": false,
+      "isWeekend": false,
+      "signals": {
+        "hasNameday": false,
+        "hasHoliday": false,
+        "hasChurchHoliday": false,
+        "lunarPhase": null
+      },
+      "summary": null,
+      "namedays": [],
+      "holidays": []
+    },
+    {
+      "date": "2025-10-03",
+      "day": 3,
+      "weekday": 5,
+      "weekdayName": "петък",
+      "isToday": true,
+      "isWeekend": false,
+      "signals": {
+        "hasNameday": true,
+        "hasHoliday": false,
+        "hasChurchHoliday": false,
+        "lunarPhase": null
+      },
+      "summary": "Денис, Денислав",
+      "namedays": ["Денис", "Денислав", "Денислава"],
+      "holidays": []
+    },
+    {
+      "date": "2025-10-04",
+      "day": 4,
+      "weekday": 6,
+      "weekdayName": "събота",
+      "isToday": false,
+      "isWeekend": true,
+      "signals": {
+        "hasNameday": false,
+        "hasHoliday": false,
+        "hasChurchHoliday": false,
+        "lunarPhase": null
+      },
+      "summary": null,
+      "namedays": [],
+      "holidays": []
+    },
+    {
+      "date": "2025-10-05",
+      "day": 5,
+      "weekday": 7,
+      "weekdayName": "неделя",
+      "isToday": false,
+      "isWeekend": true,
+      "signals": {
+        "hasNameday": false,
+        "hasHoliday": false,
+        "hasChurchHoliday": false,
+        "lunarPhase": null
+      },
+      "summary": null,
+      "namedays": [],
+      "holidays": []
+    },
+    {
+      "date": "2025-10-06",
+      "day": 6,
+      "weekday": 1,
+      "weekdayName": "понеделник",
+      "isToday": false,
+      "isWeekend": false,
+      "signals": {
+        "hasNameday": true,
+        "hasHoliday": false,
+        "hasChurchHoliday": false,
+        "lunarPhase": null
+      },
+      "summary": "Тома, Томислав",
+      "namedays": ["Тома", "Томас", "Томислав", "Томислава"],
+      "holidays": []
+    },
+    {
+      "date": "2025-10-07",
+      "day": 7,
+      "weekday": 2,
+      "weekdayName": "вторник",
+      "isToday": false,
+      "isWeekend": false,
+      "signals": {
+        "hasNameday": false,
+        "hasHoliday": false,
+        "hasChurchHoliday": false,
+        "lunarPhase": "full"
+      },
+      "summary": "Пълнолуние",
+      "namedays": [],
+      "holidays": []
+    },
+    {
+      "date": "2025-10-08",
+      "day": 8,
+      "weekday": 3,
+      "weekdayName": "сряда",
+      "isToday": false,
+      "isWeekend": false,
+      "signals": {
+        "hasNameday": true,
+        "hasHoliday": false,
+        "hasChurchHoliday": false,
+        "lunarPhase": null
+      },
+      "summary": "Пелагия",
+      "namedays": ["Пелагия", "Пелагея"],
+      "holidays": []
+    },
+    {
+      "date": "2025-10-14",
+      "day": 14,
+      "weekday": 2,
+      "weekdayName": "вторник",
+      "isToday": false,
+      "isWeekend": false,
+      "signals": {
+        "hasNameday": true,
+        "hasHoliday": false,
+        "hasChurchHoliday": true,
+        "lunarPhase": null
+      },
+      "summary": "Петка, Параскева",
+      "namedays": ["Параскева", "Петка", "Петя"],
+      "holidays": [
+        {
+          "title": "Петковден (Св. Петка)",
+          "slug": "petkovden",
+          "type": "church",
+          "isOfficial": false,
+          "movable": false
+        }
+      ]
+    },
+    {
+      "date": "2025-10-18",
+      "day": 18,
+      "weekday": 6,
+      "weekdayName": "събота",
+      "isToday": false,
+      "isWeekend": true,
+      "signals": {
+        "hasNameday": true,
+        "hasHoliday": false,
+        "hasChurchHoliday": true,
+        "lunarPhase": null
+      },
+      "summary": "Лука",
+      "namedays": ["Лука"],
+      "holidays": [
+        {
+          "title": "Св. апостол и евангелист Лука",
+          "slug": "sveti-luka",
+          "type": "church",
+          "isOfficial": false,
+          "movable": false
+        }
+      ]
+    },
+    {
+      "date": "2025-10-19",
+      "day": 19,
+      "weekday": 7,
+      "weekdayName": "неделя",
+      "isToday": false,
+      "isWeekend": true,
+      "signals": {
+        "hasNameday": true,
+        "hasHoliday": true,
+        "hasChurchHoliday": true,
+        "lunarPhase": null
+      },
+      "summary": "Йоан Рилски",
+      "namedays": ["Йоан", "Йоана", "Ивайло"],
+      "holidays": [
+        {
+          "title": "Пренасяне мощите на Св. Йоан Рилски",
+          "slug": "yoan-rilski",
+          "type": "church",
+          "isOfficial": false,
+          "movable": false
+        }
+      ]
+    },
+    {
+      "date": "2025-10-21",
+      "day": 21,
+      "weekday": 2,
+      "weekdayName": "вторник",
+      "isToday": false,
+      "isWeekend": false,
+      "signals": {
+        "hasNameday": false,
+        "hasHoliday": false,
+        "hasChurchHoliday": false,
+        "lunarPhase": "new"
+      },
+      "summary": "Новолуние",
+      "namedays": [],
+      "holidays": []
+    },
+    {
+      "date": "2025-10-26",
+      "day": 26,
+      "weekday": 7,
+      "weekdayName": "неделя",
+      "isToday": false,
+      "isWeekend": true,
+      "signals": {
+        "hasNameday": true,
+        "hasHoliday": true,
+        "hasChurchHoliday": true,
+        "lunarPhase": null
+      },
+      "summary": "Димитровден",
+      "namedays": ["Димитър", "Димитрина", "Димо", "Митко", "Митка"],
+      "holidays": [
+        {
+          "title": "Димитровден (Св. Димитър Солунски)",
+          "slug": "dimitrovden",
+          "type": "church",
+          "isOfficial": false,
+          "movable": false
+        }
+      ]
+    },
+    {
+      "date": "2025-10-27",
+      "day": 27,
+      "weekday": 1,
+      "weekdayName": "понеделник",
+      "isToday": false,
+      "isWeekend": false,
+      "signals": {
+        "hasNameday": true,
+        "hasHoliday": false,
+        "hasChurchHoliday": false,
+        "lunarPhase": null
+      },
+      "summary": "Нестор",
+      "namedays": ["Нестор", "Нестора"],
+      "holidays": []
+    }
+  ],
+  "nonWorkingDays": [],
+  "namedaysByWeek": {
+    "40": [
+      { "date": "2025-10-01", "day": 1, "names": ["Роман", "Романа"] },
+      { "date": "2025-10-03", "day": 3, "names": ["Денис", "Денислав", "Денислава"] }
+    ],
+    "41": [
+      { "date": "2025-10-06", "day": 6, "names": ["Тома", "Томас", "Томислав"] },
+      { "date": "2025-10-08", "day": 8, "names": ["Пелагия", "Пелагея"] }
+    ],
+    "42": [
+      { "date": "2025-10-14", "day": 14, "names": ["Параскева", "Петка", "Петя"] }
+    ],
+    "43": [
+      { "date": "2025-10-18", "day": 18, "names": ["Лука"] },
+      { "date": "2025-10-19", "day": 19, "names": ["Йоан", "Йоана", "Ивайло"] }
+    ],
+    "44": [
+      { "date": "2025-10-26", "day": 26, "names": ["Димитър", "Димитрина", "Димо", "Митко"] },
+      { "date": "2025-10-27", "day": 27, "names": ["Нестор", "Нестора"] }
+    ]
+  },
+  "holidaysByType": {
+    "church": [
+      {
+        "date": "2025-10-14",
+        "day": 14,
+        "title": "Петковден (Св. Петка)",
+        "slug": "petkovden",
+        "badges": []
+      },
+      {
+        "date": "2025-10-18",
+        "day": 18,
+        "title": "Св. апостол и евангелист Лука",
+        "slug": "sveti-luka",
+        "badges": []
+      },
+      {
+        "date": "2025-10-19",
+        "day": 19,
+        "title": "Пренасяне мощите на Св. Йоан Рилски",
+        "slug": "yoan-rilski",
+        "badges": []
+      },
+      {
+        "date": "2025-10-26",
+        "day": 26,
+        "title": "Димитровден (Св. Димитър Солунски)",
+        "slug": "dimitrovden",
+        "badges": []
+      }
+    ],
+    "national": [],
+    "professional": [],
+    "foreign": []
+  },
+  "lunar": [
+    { "dateTime": "2025-10-07T03:47:00Z", "phase": "Пълнолуние" },
+    { "dateTime": "2025-10-13T17:13:00Z", "phase": "Последна четвърт" },
+    { "dateTime": "2025-10-21T12:25:00Z", "phase": "Новолуние" },
+    { "dateTime": "2025-10-29T08:21:00Z", "phase": "Първа четвърт" }
+  ],
+  "solar": {
+    "city": "София",
+    "shortest": {
+      "date": "2025-10-31",
+      "dayLength": "10ч 8м",
+      "sunrise": "07:25",
+      "sunset": "17:33"
+    },
+    "longest": {
+      "date": "2025-10-01",
+      "dayLength": "11ч 35м",
+      "sunrise": "07:00",
+      "sunset": "18:35"
+    }
+  },
+  "downloads": {
+    "icsMonthUrl": "/api/ics/month/2025/10",
+    "pdfMonthUrl": "/api/pdf/month/2025/10",
+    "csvMonthUrl": "/api/csv/month/2025/10",
+    "jsonMonthUrl": "/api/data/month/2025/10.json"
+  },
+  "prevMonth": {
+    "name": "Септември",
+    "url": "/kalendar/2025/09"
+  },
+  "nextMonth": {
+    "name": "Ноември",
+    "url": "/kalendar/2025/11"
+  }
+}
+

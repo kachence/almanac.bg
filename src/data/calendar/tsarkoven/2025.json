@@ -1,0 +1,427 @@
+{
+  "type": "tsarkoven",
+  "year": 2025,
+  "totalItems": 48,
+  "nonWorkingCount": 12,
+  "movableCount": 18,
+  "months": [
+    {
+      "month": 1,
+      "items": [
+        {
+          "date": "2025-01-01",
+          "title": "Нова година, Васильовден",
+          "slug": "nova-godina-vasil",
+          "movable": false,
+          "nonWorking": true,
+          "note": "Официален празник, неработен ден",
+          "icsUrl": "/api/ics/church/nova-godina-2025"
+        },
+        {
+          "date": "2025-01-06",
+          "title": "Богоявление (Йордановден)",
+          "slug": "yordanovden",
+          "movable": false,
+          "nonWorking": true,
+          "note": "Кръщение Господне, официален празник",
+          "icsUrl": "/api/ics/church/yordanovden-2025"
+        },
+        {
+          "date": "2025-01-07",
+          "title": "Св. Йоан Кръстител",
+          "slug": "sv-yoan-krastitel",
+          "movable": false,
+          "nonWorking": false,
+          "note": "Ден след Богоявление",
+          "icsUrl": "/api/ics/church/sv-yoan-krastitel-2025"
+        },
+        {
+          "date": "2025-01-17",
+          "title": "Св. Антоний Велики",
+          "slug": "sv-antoniy",
+          "movable": false,
+          "nonWorking": false,
+          "icsUrl": "/api/ics/church/sv-antoniy-2025"
+        },
+        {
+          "date": "2025-01-30",
+          "title": "Св. Три светители",
+          "slug": "tri-svetiteli",
+          "movable": false,
+          "nonWorking": false,
+          "note": "Васил Велики, Григорий Богослов, Йоан Златоуст",
+          "icsUrl": "/api/ics/church/tri-svetiteli-2025"
+        }
+      ]
+    },
+    {
+      "month": 2,
+      "items": [
+        {
+          "date": "2025-02-02",
+          "title": "Сретение Господне",
+          "slug": "sretenie",
+          "movable": false,
+          "nonWorking": false,
+          "icsUrl": "/api/ics/church/sretenie-2025"
+        },
+        {
+          "date": "2025-02-10",
+          "title": "Св. Харалампий",
+          "slug": "sv-haralampiy",
+          "movable": false,
+          "nonWorking": false,
+          "icsUrl": "/api/ics/church/sv-haralampiy-2025"
+        }
+      ]
+    },
+    {
+      "month": 3,
+      "items": [
+        {
+          "date": "2025-03-03",
+          "title": "Освобождението на България",
+          "slug": "osvobozhdenieto",
+          "movable": false,
+          "nonWorking": true,
+          "note": "Национален празник",
+          "icsUrl": "/api/ics/church/osvobozhdenieto-2025"
+        },
+        {
+          "date": "2025-03-09",
+          "title": "Св. 40 мъченици",
+          "slug": "40-muchenitsi",
+          "movable": false,
+          "nonWorking": false,
+          "icsUrl": "/api/ics/church/40-muchenitsi-2025"
+        },
+        {
+          "date": "2025-03-25",
+          "title": "Благовещение",
+          "slug": "blagoveshenie",
+          "movable": false,
+          "nonWorking": false,
+          "icsUrl": "/api/ics/church/blagoveshenie-2025"
+        }
+      ]
+    },
+    {
+      "month": 4,
+      "items": [
+        {
+          "date": "2025-04-13",
+          "title": "Цветница (Връбница)",
+          "slug": "tsvetnitsa",
+          "movable": true,
+          "nonWorking": false,
+          "note": "Неделя преди Великден",
+          "icsUrl": "/api/ics/church/tsvetnitsa-2025"
+        },
+        {
+          "date": "2025-04-18",
+          "title": "Велики петък",
+          "slug": "veliki-petuk",
+          "movable": true,
+          "nonWorking": false,
+          "note": "Разпятие Христово",
+          "icsUrl": "/api/ics/church/veliki-petuk-2025"
+        },
+        {
+          "date": "2025-04-20",
+          "title": "Великден (Пасха)",
+          "slug": "velikden",
+          "movable": true,
+          "nonWorking": true,
+          "note": "Възкресение Христово, официален празник",
+          "icsUrl": "/api/ics/church/velikden-2025"
+        },
+        {
+          "date": "2025-04-21",
+          "title": "Велики понеделник (Пасха)",
+          "slug": "veliki-ponedelnik-pasha",
+          "movable": true,
+          "nonWorking": true,
+          "note": "Втори ден на Великден",
+          "icsUrl": "/api/ics/church/veliki-ponedelnik-2025"
+        },
+        {
+          "date": "2025-04-23",
+          "title": "Гергьовден",
+          "slug": "gergyovden",
+          "movable": false,
+          "nonWorking": false,
+          "note": "Св. Георги Победоносец",
+          "icsUrl": "/api/ics/church/gergyovden-2025"
+        }
+      ]
+    },
+    {
+      "month": 5,
+      "items": [
+        {
+          "date": "2025-05-01",
+          "title": "Ден на труда",
+          "slug": "den-na-truda",
+          "movable": false,
+          "nonWorking": true,
+          "note": "Официален празник",
+          "icsUrl": "/api/ics/church/den-na-truda-2025"
+        },
+        {
+          "date": "2025-05-06",
+          "title": "Гергьовден (пренесен)",
+          "slug": "gergyovden-prenesen",
+          "movable": true,
+          "nonWorking": false,
+          "note": "Празникът се отбелязва след Великден ако пада в Страстната седмица",
+          "icsUrl": "/api/ics/church/gergyovden-prenesen-2025"
+        },
+        {
+          "date": "2025-05-24",
+          "title": "Св. св. Кирил и Методий",
+          "slug": "kiril-i-metodiy",
+          "movable": false,
+          "nonWorking": true,
+          "note": "Ден на българската просвета и култура",
+          "icsUrl": "/api/ics/church/kiril-i-metodiy-2025"
+        },
+        {
+          "date": "2025-05-29",
+          "title": "Възнесение Господне",
+          "slug": "vaznesenie",
+          "movable": true,
+          "nonWorking": false,
+          "note": "40 дни след Великден",
+          "icsUrl": "/api/ics/church/vaznesenie-2025"
+        }
+      ]
+    },
+    {
+      "month": 6,
+      "items": [
+        {
+          "date": "2025-06-08",
+          "title": "Петдесетница (Св. Троица)",
+          "slug": "petdesetnitsa",
+          "movable": true,
+          "nonWorking": false,
+          "note": "50 дни след Великден",
+          "icsUrl": "/api/ics/church/petdesetnitsa-2025"
+        },
+        {
+          "date": "2025-06-09",
+          "title": "Св. Дух (Духовден)",
+          "slug": "duhovden",
+          "movable": true,
+          "nonWorking": false,
+          "note": "Ден след Петдесетница",
+          "icsUrl": "/api/ics/church/duhovden-2025"
+        },
+        {
+          "date": "2025-06-24",
+          "title": "Рождество на св. Йоан Предтеча",
+          "slug": "rozhdestvo-yoan-predtecha",
+          "movable": false,
+          "nonWorking": false,
+          "note": "Еньовден",
+          "icsUrl": "/api/ics/church/enyovden-2025"
+        },
+        {
+          "date": "2025-06-29",
+          "title": "Св. апостоли Петър и Павел",
+          "slug": "petar-i-pavel",
+          "movable": false,
+          "nonWorking": false,
+          "icsUrl": "/api/ics/church/petar-i-pavel-2025"
+        }
+      ]
+    },
+    {
+      "month": 7,
+      "items": [
+        {
+          "date": "2025-07-20",
+          "title": "Св. пророк Илия",
+          "slug": "sv-iliya",
+          "movable": false,
+          "nonWorking": false,
+          "note": "Илинден",
+          "icsUrl": "/api/ics/church/sv-iliya-2025"
+        },
+        {
+          "date": "2025-07-27",
+          "title": "Св. Седмочисленици",
+          "slug": "sedmochislenitsi",
+          "movable": false,
+          "nonWorking": false,
+          "note": "Св. Кирил, Методий и техните ученици",
+          "icsUrl": "/api/ics/church/sedmochislenitsi-2025"
+        }
+      ]
+    },
+    {
+      "month": 8,
+      "items": [
+        {
+          "date": "2025-08-06",
+          "title": "Преображение Господне",
+          "slug": "preobrazhenie",
+          "movable": false,
+          "nonWorking": false,
+          "icsUrl": "/api/ics/church/preobrazhenie-2025"
+        },
+        {
+          "date": "2025-08-15",
+          "title": "Успение Богородично",
+          "slug": "uspenie-bogorodichno",
+          "movable": false,
+          "nonWorking": true,
+          "note": "Голяма Богородица, официален празник",
+          "icsUrl": "/api/ics/church/uspenie-2025"
+        },
+        {
+          "date": "2025-08-29",
+          "title": "Усекновение на св. Йоан Кръстител",
+          "slug": "useknovenie",
+          "movable": false,
+          "nonWorking": false,
+          "icsUrl": "/api/ics/church/useknovenie-2025"
+        }
+      ]
+    },
+    {
+      "month": 9,
+      "items": [
+        {
+          "date": "2025-09-06",
+          "title": "Съединението на България",
+          "slug": "saedinenieto",
+          "movable": false,
+          "nonWorking": true,
+          "note": "Национален празник",
+          "icsUrl": "/api/ics/church/saedinenieto-2025"
+        },
+        {
+          "date": "2025-09-08",
+          "title": "Рождество Богородично",
+          "slug": "rozhdestvo-bogorodichno",
+          "movable": false,
+          "nonWorking": false,
+          "note": "Малка Богородица",
+          "icsUrl": "/api/ics/church/malka-bogoroditsa-2025"
+        },
+        {
+          "date": "2025-09-14",
+          "title": "Въздвижение на Св. Кръст",
+          "slug": "vazdvizhenie-krast",
+          "movable": false,
+          "nonWorking": false,
+          "note": "Кръстовден",
+          "icsUrl": "/api/ics/church/krastovden-2025"
+        },
+        {
+          "date": "2025-09-22",
+          "title": "Независимостта на България",
+          "slug": "nezavisimostta",
+          "movable": false,
+          "nonWorking": true,
+          "note": "Национален празник",
+          "icsUrl": "/api/ics/church/nezavisimostta-2025"
+        }
+      ]
+    },
+    {
+      "month": 10,
+      "items": [
+        {
+          "date": "2025-10-14",
+          "title": "Св. Петка (Параскева)",
+          "slug": "sv-petka",
+          "movable": false,
+          "nonWorking": false,
+          "note": "Петковден",
+          "icsUrl": "/api/ics/church/sv-petka-2025"
+        },
+        {
+          "date": "2025-10-26",
+          "title": "Св. великомъченик Димитър",
+          "slug": "sv-dimitar",
+          "movable": false,
+          "nonWorking": false,
+          "note": "Димитровден",
+          "icsUrl": "/api/ics/church/sv-dimitar-2025"
+        }
+      ]
+    },
+    {
+      "month": 11,
+      "items": [
+        {
+          "date": "2025-11-08",
+          "title": "Архангелов ден (Арх. Михаил)",
+          "slug": "arhangelov-den",
+          "movable": false,
+          "nonWorking": false,
+          "note": "Архангеловден",
+          "icsUrl": "/api/ics/church/arhangelov-den-2025"
+        },
+        {
+          "date": "2025-11-21",
+          "title": "Въведение Богородично",
+          "slug": "vavedenie-bogorodichno",
+          "movable": false,
+          "nonWorking": false,
+          "icsUrl": "/api/ics/church/vavedenie-2025"
+        }
+      ]
+    },
+    {
+      "month": 12,
+      "items": [
+        {
+          "date": "2025-12-06",
+          "title": "Св. Николай Чудотворец",
+          "slug": "sv-nikolay",
+          "movable": false,
+          "nonWorking": false,
+          "note": "Никулден",
+          "icsUrl": "/api/ics/church/nikulden-2025"
+        },
+        {
+          "date": "2025-12-24",
+          "title": "Бъдни вечер",
+          "slug": "badni-vecher",
+          "movable": false,
+          "nonWorking": false,
+          "note": "Навечерие на Рождество Христово",
+          "icsUrl": "/api/ics/church/badni-vecher-2025"
+        },
+        {
+          "date": "2025-12-25",
+          "title": "Рождество Христово",
+          "slug": "rozhdestvo-hristovo",
+          "movable": false,
+          "nonWorking": true,
+          "note": "Коледа, официален празник",
+          "icsUrl": "/api/ics/church/koleda-2025"
+        },
+        {
+          "date": "2025-12-26",
+          "title": "Събор на Пресвета Богородица",
+          "slug": "sabor-bogoroditsa",
+          "movable": false,
+          "nonWorking": true,
+          "note": "Втори ден на Коледа",
+          "icsUrl": "/api/ics/church/sabor-bogoroditsa-2025"
+        }
+      ]
+    }
+  ],
+  "downloads": {
+    "icsYearUrl": "/api/ics/church/2025",
+    "csvUrl": "/api/export/church/2025.csv",
+    "jsonUrl": "/api/export/church/2025.json",
+    "pdfUrl": "/api/export/church/2025.pdf"
+  }
+}
+

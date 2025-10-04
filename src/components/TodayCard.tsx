@@ -29,7 +29,7 @@ export function TodayCard({
   historicalEvent
 }: TodayCardProps) {
   return (
-    <div className="bg-card rounded-2xl shadow-[0_1px_2px_rgba(31,25,21,.08),0_8px_24px_rgba(31,25,21,.06)] p-8 border border-border border-t-[3px] border-t-accent h-full flex flex-col">
+    <div className="bg-card rounded-2xl shadow-[0_1px_2px_rgba(31,25,21,.08),0_8px_24px_rgba(31,25,21,.06)] p-8 border border-border border-t-[2px] border-t-accent h-full flex flex-col">
       <div className="flex items-center gap-3 mb-6">
         <Calendar className="w-8 h-8 text-primary" />
         <h1 className="text-[2rem] md:text-[2.5rem] font-bold text-text">
@@ -114,7 +114,7 @@ export function TodayCard({
 
         {/* "На този ден" Historical Event */}
         {historicalEvent && (
-          <div className="bg-soft border border-border rounded-xl px-4 py-3">
+          <div className="bg-soft/60 border border-border rounded-xl px-4 py-3">
             <p className="text-sm text-text leading-relaxed">
               <span className="font-semibold">На този ден</span> {historicalEvent}
             </p>
@@ -125,11 +125,11 @@ export function TodayCard({
         <div className="flex flex-col sm:flex-row gap-3 pt-4">
           <Link
             href="/kalendar/2025/10"
-            className="flex-1 h-12 flex items-center justify-center px-5 bg-[#F46A03] hover:bg-[#DD5F02] text-white rounded-xl font-semibold transition-colors shadow-sm focus:outline focus:outline-3 focus:outline-[#F4BF3A80] focus:outline-offset-2"
+            className="flex-1 h-12 flex items-center justify-center px-5 bg-[#F46A03] hover:bg-[#DD5F02] text-white rounded-xl font-semibold transition-colors shadow-sm focus:outline focus:outline-3 focus:outline-[#F4BF3AA0] focus:outline-offset-2"
           >
             Календар за октомври →
           </Link>
-          <button className="flex-1 h-12 px-5 border-2 border-[#F2E6D7] text-[#C95502] bg-[#FFFBF2] hover:bg-[#FFF6EB] rounded-xl font-semibold transition-colors focus:outline focus:outline-3 focus:outline-[#F4BF3A80] focus:outline-offset-2">
+              <button className="flex-1 h-12 px-5 border-2 border-[#F2E6D7] text-[#C95502] bg-[#FFFBF2] hover:bg-[#FFE8D1] rounded-xl font-semibold transition-colors focus:outline focus:outline-3 focus:outline-[#F4BF3AA0] focus:outline-offset-2">
             Добави днешните събития
           </button>
         </div>

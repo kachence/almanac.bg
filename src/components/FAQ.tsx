@@ -1,3 +1,5 @@
+import { CircleHelp } from 'lucide-react'
+
 const faqs = [
   {
     id: 1,
@@ -39,6 +41,9 @@ export function FAQ() {
       
       <div className="relative mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center mb-16">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-accent/20 rounded-full mb-4">
+            <CircleHelp className="w-8 h-8 text-primary" />
+          </div>
           <h2 className="text-3xl lg:text-4xl font-semibold tracking-tight text-text mb-6">
             Често задавани въпроси
           </h2>

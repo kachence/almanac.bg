@@ -1,0 +1,192 @@
+{
+  "type": "slunchev",
+  "year": 2025,
+  "city": "София",
+  "citySlug": "sofia",
+  "availableCities": [
+    { "name": "София", "slug": "sofia" },
+    { "name": "Пловдив", "slug": "plovdiv" },
+    { "name": "Варна", "slug": "varna" },
+    { "name": "Бургас", "slug": "burgas" },
+    { "name": "Русе", "slug": "ruse" }
+  ],
+  "months": [
+    {
+      "month": 1,
+      "extremes": {
+        "firstSunrise": "08:05",
+        "lastSunset": "17:41"
+      },
+      "summary": {
+        "shortestDay": {
+          "date": "1 януари",
+          "length": "9ч 29м"
+        }
+      },
+      "monthUrls": {
+        "page": "/kalendar/slunchev/sofia/2025/01",
+        "csv": "/api/export/solar/sofia/2025-01.csv",
+        "json": "/api/export/solar/sofia/2025-01.json"
+      }
+    },
+    {
+      "month": 2,
+      "extremes": {
+        "firstSunrise": "07:48",
+        "lastSunset": "18:14"
+      },
+      "summary": {},
+      "monthUrls": {
+        "page": "/kalendar/slunchev/sofia/2025/02",
+        "csv": "/api/export/solar/sofia/2025-02.csv",
+        "json": "/api/export/solar/sofia/2025-02.json"
+      }
+    },
+    {
+      "month": 3,
+      "extremes": {
+        "firstSunrise": "07:12",
+        "lastSunset": "19:43"
+      },
+      "summary": {},
+      "monthUrls": {
+        "page": "/kalendar/slunchev/sofia/2025/03",
+        "csv": "/api/export/solar/sofia/2025-03.csv",
+        "json": "/api/export/solar/sofia/2025-03.json"
+      }
+    },
+    {
+      "month": 4,
+      "extremes": {
+        "firstSunrise": "07:16",
+        "lastSunset": "20:13"
+      },
+      "summary": {},
+      "monthUrls": {
+        "page": "/kalendar/slunchev/sofia/2025/04",
+        "csv": "/api/export/solar/sofia/2025-04.csv",
+        "json": "/api/export/solar/sofia/2025-04.json"
+      }
+    },
+    {
+      "month": 5,
+      "extremes": {
+        "firstSunrise": "06:27",
+        "lastSunset": "20:44"
+      },
+      "summary": {},
+      "monthUrls": {
+        "page": "/kalendar/slunchev/sofia/2025/05",
+        "csv": "/api/export/solar/sofia/2025-05.csv",
+        "json": "/api/export/solar/sofia/2025-05.json"
+      }
+    },
+    {
+      "month": 6,
+      "extremes": {
+        "firstSunrise": "06:00",
+        "lastSunset": "21:04"
+      },
+      "summary": {
+        "longestDay": {
+          "date": "21 юни",
+          "length": "15ч 12м"
+        }
+      },
+      "monthUrls": {
+        "page": "/kalendar/slunchev/sofia/2025/06",
+        "csv": "/api/export/solar/sofia/2025-06.csv",
+        "json": "/api/export/solar/sofia/2025-06.json"
+      }
+    },
+    {
+      "month": 7,
+      "extremes": {
+        "firstSunrise": "06:08",
+        "lastSunset": "21:00"
+      },
+      "summary": {},
+      "monthUrls": {
+        "page": "/kalendar/slunchev/sofia/2025/07",
+        "csv": "/api/export/solar/sofia/2025-07.csv",
+        "json": "/api/export/solar/sofia/2025-07.json"
+      }
+    },
+    {
+      "month": 8,
+      "extremes": {
+        "firstSunrise": "06:38",
+        "lastSunset": "20:20"
+      },
+      "summary": {},
+      "monthUrls": {
+        "page": "/kalendar/slunchev/sofia/2025/08",
+        "csv": "/api/export/solar/sofia/2025-08.csv",
+        "json": "/api/export/solar/sofia/2025-08.json"
+      }
+    },
+    {
+      "month": 9,
+      "extremes": {
+        "firstSunrise": "07:08",
+        "lastSunset": "19:24"
+      },
+      "summary": {},
+      "monthUrls": {
+        "page": "/kalendar/slunchev/sofia/2025/09",
+        "csv": "/api/export/solar/sofia/2025-09.csv",
+        "json": "/api/export/solar/sofia/2025-09.json"
+      }
+    },
+    {
+      "month": 10,
+      "extremes": {
+        "firstSunrise": "07:40",
+        "lastSunset": "18:22"
+      },
+      "summary": {},
+      "monthUrls": {
+        "page": "/kalendar/slunchev/sofia/2025/10",
+        "csv": "/api/export/solar/sofia/2025-10.csv",
+        "json": "/api/export/solar/sofia/2025-10.json"
+      }
+    },
+    {
+      "month": 11,
+      "extremes": {
+        "firstSunrise": "07:15",
+        "lastSunset": "17:31"
+      },
+      "summary": {},
+      "monthUrls": {
+        "page": "/kalendar/slunchev/sofia/2025/11",
+        "csv": "/api/export/solar/sofia/2025-11.csv",
+        "json": "/api/export/solar/sofia/2025-11.json"
+      }
+    },
+    {
+      "month": 12,
+      "extremes": {
+        "firstSunrise": "07:50",
+        "lastSunset": "17:19"
+      },
+      "summary": {
+        "shortestDay": {
+          "date": "21 декември",
+          "length": "9ч 27м"
+        }
+      },
+      "monthUrls": {
+        "page": "/kalendar/slunchev/sofia/2025/12",
+        "csv": "/api/export/solar/sofia/2025-12.csv",
+        "json": "/api/export/solar/sofia/2025-12.json"
+      }
+    }
+  ],
+  "downloads": {
+    "csvUrl": "/api/export/solar/sofia/2025.csv",
+    "jsonUrl": "/api/export/solar/sofia/2025.json",
+    "pdfUrl": "/api/export/solar/sofia/2025.pdf"
+  }
+}
+

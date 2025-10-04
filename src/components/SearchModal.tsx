@@ -2,17 +2,7 @@
 
 import * as React from "react"
 import { useRouter } from "next/navigation"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { 
-  faFileAlt, 
-  faBuilding, 
-  faFolderOpen, 
-  faBookOpen, 
-  faDownload, 
-  faEdit, 
-  faArrowTrendUp,
-  faClock
-} from "@fortawesome/free-solid-svg-icons"
+import { User, Gift, Calendar, Sparkles, Clock, ArrowRight, Search as SearchIcon } from 'lucide-react'
 import {
   CommandDialog,
   CommandEmpty,
@@ -21,18 +11,16 @@ import {
   CommandItem,
   CommandList,
 } from "@/components/ui/command"
-import { Badge } from "@/components/ui/badge"
 
 interface SearchResult {
   id: string
-  type: 'template' | 'institution' | 'category' | 'doc'
+  type: 'nameday' | 'holiday' | 'date' | 'quick'
   title: string
   description: string
   url: string
-  institution?: string
-  hasDocx?: boolean
+  date?: string
   isPopular?: boolean
-  isRecent?: boolean
+  isToday?: boolean
 }
 
 interface SearchModalProps {
@@ -44,68 +32,74 @@ interface SearchModalProps {
 const mockResults: SearchResult[] = [
   {
     id: '1',
-    type: 'template',
-    title: 'Жалба до НЕЛК',
-    description: 'Некачествено обслужване',
-    url: '/templates/jalba-nelk',
-    institution: 'НЕЛК',
-    hasDocx: true,
+    type: 'nameday',
+    title: 'Иван',
+    description: '7 януари, 24 юни',
+    url: '/imen-den/ivan',
     isPopular: true
   },
   {
     id: '2',
-    type: 'template',
-    title: 'Възражение е-фиш',
-    description: 'Електронен фиш за нарушение',
-    url: '/templates/vazrajenie-efish',
-    institution: 'КАТ',
-    hasDocx: true,
-    isRecent: true
+    type: 'nameday',
+    title: 'Мария',
+    description: '15 август, 21 септември',
+    url: '/imen-den/maria',
+    isPopular: true
   },
   {
     id: '3',
-    type: 'template',
-    title: 'Протокол ЕС',
-    description: 'Избор на управител',
-    url: '/templates/protokol-es',
-    institution: 'Съд',
-    hasDocx: false
+    type: 'nameday',
+    title: 'Георги',
+    description: '6 май (Гергьовден)',
+    url: '/imen-den/georgi',
+    isPopular: true
   },
   {
     id: '4',
-    type: 'institution',
-    title: 'НАП',
-    description: 'Национална агенция за приходите',
-    url: '/institutions/nap'
+    type: 'holiday',
+    title: 'Великден',
+    description: '20 април 2025',
+    url: '/praznik/velikden',
+    date: '20 април 2025'
   },
   {
     id: '5',
-    type: 'category',
-    title: 'Автомобили и превозни средства',
-    description: '24 шаблона',
-    url: '/categories/automotive'
+    type: 'holiday',
+    title: 'Коледа',
+    description: '25 декември • Официален празник',
+    url: '/praznik/koleda',
+    date: '25 декември'
   },
   {
     id: '6',
-    type: 'doc',
-    title: 'Как да попълня жалба до НЕЛК',
-    description: 'Стъпка по стъпка ръководство',
-    url: '/guides/jalba-nelk-guide'
+    type: 'holiday',
+    title: 'Ивановден',
+    description: '7 януари • Празник на Иван',
+    url: '/praznik/ivanovden',
+    date: '7 януари'
+  },
+  {
+    id: '7',
+    type: 'date',
+    title: '3 октомври 2025',
+    description: 'Петък • Работен ден',
+    url: '/kalendar/2025/10/3',
+    isToday: true
   }
 ]
 
-const topQueries = [
-  'жалба до НЕЛК',
-  'възражение е-фиш', 
-  'протокол ЕС',
-  'молба за отпуск',
-  'договор за наем'
+const quickActions = [
+  { name: 'Днес', url: '/kalendar/2025/10/3', icon: Sparkles },
+  { name: 'Този месец', url: '/kalendar/2025/10', icon: Calendar },
+  { name: 'Неработни дни 2025', url: '/kalendar/2025#nerabotni', icon: Clock }
 ]
 
-const categories = [
-  { name: 'Автомобили', url: '/categories/automotive' },
-  { name: 'Недвижими имоти', url: '/categories/real-estate' },
-  { name: 'Здравеопазване', url: '/categories/healthcare' }
+const topQueries = [
+  'Иван',
+  'Великден', 
+  'Коледа',
+  'Гергьовден',
+  'Баба Марта'
 ]
 
 export function SearchModal({ open, onOpenChange }: SearchModalProps) {
@@ -113,6 +107,28 @@ export function SearchModal({ open, onOpenChange }: SearchModalProps) {
   const [query, setQuery] = React.useState('')
   const [results, setResults] = React.useState<SearchResult[]>([])
   const [loading, setLoading] = React.useState(false)
+  const [recentSearches, setRecentSearches] = React.useState<string[]>([])
+
+  // Load recent searches from localStorage
+  React.useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const stored = localStorage.getItem('almanac_recent_searches')
+      if (stored) {
+        setRecentSearches(JSON.parse(stored).slice(0, 5))
+      }
+    }
+  }, [])
+
+  // Save search to recent
+  const saveRecentSearch = (searchQuery: string) => {
+    if (typeof window !== 'undefined' && searchQuery.trim()) {
+      const stored = localStorage.getItem('almanac_recent_searches')
+      const recent = stored ? JSON.parse(stored) : []
+      const updated = [searchQuery, ...recent.filter((s: string) => s !== searchQuery)].slice(0, 5)
+      localStorage.setItem('almanac_recent_searches', JSON.stringify(updated))
+      setRecentSearches(updated)
+    }
+  }
 
   // Debounced search
   React.useEffect(() => {
@@ -156,12 +172,14 @@ export function SearchModal({ open, onOpenChange }: SearchModalProps) {
   }, [query])
 
   const handleSelect = (result: SearchResult) => {
+    saveRecentSearch(query)
     onOpenChange(false)
     router.push(result.url)
   }
 
   const handleSubmit = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' && query.trim()) {
+      saveRecentSearch(query)
       onOpenChange(false)
       router.push(`/search?q=${encodeURIComponent(query.trim())}`)
     }
@@ -169,20 +187,20 @@ export function SearchModal({ open, onOpenChange }: SearchModalProps) {
 
   const getIcon = (type: string) => {
     switch (type) {
-      case 'template': return faFileAlt
-      case 'institution': return faBuilding
-      case 'category': return faFolderOpen
-      case 'doc': return faBookOpen
-      default: return faFileAlt
+      case 'nameday': return User
+      case 'holiday': return Gift
+      case 'date': return Calendar
+      case 'quick': return Sparkles
+      default: return Calendar
     }
   }
 
   const getTypeLabel = (type: string) => {
     switch (type) {
-      case 'template': return 'Шаблон'
-      case 'institution': return 'Институция'
-      case 'category': return 'Категория'
-      case 'doc': return 'Ръководство'
+      case 'nameday': return 'Имен ден'
+      case 'holiday': return 'Празник'
+      case 'date': return 'Дата'
+      case 'quick': return 'Бързо'
       default: return 'Резултат'
     }
   }
@@ -190,41 +208,72 @@ export function SearchModal({ open, onOpenChange }: SearchModalProps) {
   return (
     <CommandDialog open={open} onOpenChange={onOpenChange}>
       <CommandInput
-        placeholder="Търсене на шаблони, документи и ръководства..."
+        placeholder="Търсене: име, празник, дата..."
         value={query}
         onValueChange={setQuery}
         onKeyDown={handleSubmit}
       />
-      <CommandList>
+      <CommandList className="max-h-[400px] scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent">
         {!query && (
           <>
-            <CommandGroup heading="Популярни търсения">
+            <CommandGroup heading="БЪРЗИ ДЕЙСТВИЯ" className="[&_[cmdk-group-heading]]:text-[11px] [&_[cmdk-group-heading]]:uppercase [&_[cmdk-group-heading]]:tracking-wider [&_[cmdk-group-heading]]:font-semibold [&_[cmdk-group-heading]]:text-muted/70 [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-3">
+              <div className="bg-accent/5 rounded-lg p-2 mb-2">
+                {quickActions.map((action) => {
+                  const Icon = action.icon
+                  return (
+                    <CommandItem
+                      key={action.name}
+                      onSelect={() => {
+                        onOpenChange(false)
+                        router.push(action.url)
+                      }}
+                      className="flex items-center gap-3 py-3 px-3 mb-1 last:mb-0 rounded-lg hover:bg-card transition-all hover:-translate-y-[1px] cursor-pointer"
+                    >
+                      <div className="w-8 h-8 rounded-lg bg-accent/20 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                        <Icon className="w-4 h-4 text-primary" />
+                      </div>
+                      <span className="font-semibold text-text">{action.name}</span>
+                      <ArrowRight className="w-4 h-4 text-muted ml-auto opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </CommandItem>
+                  )
+                })}
+              </div>
+            </CommandGroup>
+
+            {/* Divider */}
+            <div className="h-px bg-border my-2" />
+
+            {recentSearches.length > 0 && (
+              <>
+                <CommandGroup heading="СКОРОШНИ ТЪРСЕНИЯ" className="[&_[cmdk-group-heading]]:text-[11px] [&_[cmdk-group-heading]]:uppercase [&_[cmdk-group-heading]]:tracking-wider [&_[cmdk-group-heading]]:font-semibold [&_[cmdk-group-heading]]:text-muted/70 [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-3">
+                  {recentSearches.map((recent) => (
+                    <CommandItem
+                      key={recent}
+                      onSelect={() => {
+                        setQuery(recent)
+                      }}
+                      className="flex items-center gap-3 px-3 py-2"
+                    >
+                      <Clock className="w-4 h-4 text-muted" />
+                      <span>{recent}</span>
+                    </CommandItem>
+                  ))}
+                </CommandGroup>
+                <div className="h-px bg-border my-2" />
+              </>
+            )}
+            
+            <CommandGroup heading="ПОПУЛЯРНИ ТЪРСЕНИЯ" className="[&_[cmdk-group-heading]]:text-[11px] [&_[cmdk-group-heading]]:uppercase [&_[cmdk-group-heading]]:tracking-wider [&_[cmdk-group-heading]]:font-semibold [&_[cmdk-group-heading]]:text-muted/70 [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-3">
               {topQueries.map((topQuery) => (
                 <CommandItem
                   key={topQuery}
                   onSelect={() => {
                     setQuery(topQuery)
                   }}
-                  className="flex items-center gap-2"
+                  className="flex items-center gap-3 px-3 py-2"
                 >
-                  <FontAwesomeIcon icon={faArrowTrendUp} className="text-sm text-muted" />
+                  <SearchIcon className="w-4 h-4 text-muted" />
                   <span>{topQuery}</span>
-                </CommandItem>
-              ))}
-            </CommandGroup>
-            
-            <CommandGroup heading="Категории">
-              {categories.map((category) => (
-                <CommandItem
-                  key={category.name}
-                  onSelect={() => {
-                    onOpenChange(false)
-                    router.push(category.url)
-                  }}
-                  className="flex items-center gap-2"
-                >
-                  <FontAwesomeIcon icon={faFolderOpen} className="text-sm text-muted" />
-                  <span>{category.name}</span>
                 </CommandItem>
               ))}
             </CommandGroup>
@@ -232,59 +281,119 @@ export function SearchModal({ open, onOpenChange }: SearchModalProps) {
         )}
 
         {query && results.length === 0 && !loading && (
-          <CommandEmpty>Няма намерени резултати за &quot;{query}&quot;</CommandEmpty>
+          <CommandEmpty>
+            <div className="py-12 text-center">
+              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-muted/10 flex items-center justify-center">
+                <SearchIcon className="w-8 h-8 text-muted" />
+              </div>
+              <p className="text-muted font-medium mb-1">
+                Няма намерени резултати
+              </p>
+              <p className="text-sm text-muted/70">
+                Опитайте с друго име, празник или дата
+              </p>
+            </div>
+          </CommandEmpty>
         )}
 
         {query && results.length > 0 && (
           <>
-            {/* Templates */}
-            {results.filter(r => r.type === 'template').length > 0 && (
-              <CommandGroup heading="Шаблони">
-                {results.filter(r => r.type === 'template').slice(0, 6).map((result, index) => {
-                  const icon = getIcon(result.type)
-                  const isSelected = index === 0 // First item is selected by default
+            {/* Name Days */}
+            {results.filter(r => r.type === 'nameday').length > 0 && (
+              <CommandGroup heading="ИМЕНИ ДНИ" className="[&_[cmdk-group-heading]]:text-[11px] [&_[cmdk-group-heading]]:uppercase [&_[cmdk-group-heading]]:tracking-wider [&_[cmdk-group-heading]]:font-semibold [&_[cmdk-group-heading]]:text-muted/70 [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-3">
+                {results.filter(r => r.type === 'nameday').slice(0, 6).map((result, index) => {
+                  const Icon = getIcon(result.type)
+                  const isFirst = index === 0
                   return (
                     <CommandItem
                       key={result.id}
                       onSelect={() => handleSelect(result)}
-                      className={`flex items-center justify-between gap-2 py-3 ${isSelected ? 'bg-primary/10 border-l-2 border-l-primary' : ''}`}
+                      className={`flex items-center gap-3 py-3 px-3 mb-1 rounded-lg ${isFirst ? 'bg-accent/10 border-l-2 border-l-primary' : ''}`}
                     >
-                      <div className="flex items-center gap-3 flex-1 min-w-0">
-                        <FontAwesomeIcon 
-                          icon={icon} 
-                          className={`text-sm flex-shrink-0 ${isSelected ? 'text-primary' : 'text-muted'}`} 
-                        />
-                        <div className="flex-1 min-w-0">
-                          <div className="flex items-center gap-2">
-                            <span className={`font-medium truncate ${isSelected ? 'text-primary' : 'text-text'}`}>
-                              {result.title}
+                      <div className="w-8 h-8 rounded-lg bg-[#FFF0C8] border border-[#F0C770] flex items-center justify-center flex-shrink-0">
+                        <Icon className="w-4 h-4 text-[#C95502]" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2">
+                          <span className={`font-semibold truncate ${isFirst ? 'text-primary' : 'text-text'}`}>
+                            {result.title}
+                          </span>
+                          {result.isPopular && (
+                            <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-accent/20 text-muted-strong font-medium">
+                              популярен
                             </span>
-                            {result.isPopular && (
-                              <Badge variant="muted" className="text-[10px] px-1 py-0">
-                                популярен
-                              </Badge>
-                            )}
-                            {result.isRecent && (
-                              <Badge variant="accent" className="text-[10px] px-1 py-0">
-                                нов
-                              </Badge>
-                            )}
-                          </div>
-                          <p className="text-xs text-muted truncate">{result.description}</p>
-                          {result.institution && (
-                            <p className="text-[10px] text-muted/70">{result.institution}</p>
                           )}
                         </div>
+                        <p className="text-sm text-muted truncate">{result.description}</p>
                       </div>
-                      <div className="flex items-center gap-1 flex-shrink-0">
-                        {result.hasDocx ? (
-                          <>
-                            <Badge variant="pdf" className="text-[9px] px-1 py-0">PDF</Badge>
-                            <Badge variant="docx" className="text-[9px] px-1 py-0">DOCX</Badge>
-                          </>
-                        ) : (
-                          <Badge variant="pdf" className="text-[9px] px-1 py-0">PDF</Badge>
-                        )}
+                    </CommandItem>
+                  )
+                })}
+              </CommandGroup>
+            )}
+            
+            {/* Divider between sections */}
+            {results.filter(r => r.type === 'nameday').length > 0 && results.filter(r => r.type === 'holiday').length > 0 && (
+              <div className="h-px bg-border my-2" />
+            )}
+
+            {/* Holidays */}
+            {results.filter(r => r.type === 'holiday').length > 0 && (
+              <CommandGroup heading="ПРАЗНИЦИ" className="[&_[cmdk-group-heading]]:text-[11px] [&_[cmdk-group-heading]]:uppercase [&_[cmdk-group-heading]]:tracking-wider [&_[cmdk-group-heading]]:font-semibold [&_[cmdk-group-heading]]:text-muted/70 [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-3">
+                {results.filter(r => r.type === 'holiday').slice(0, 4).map((result) => {
+                  const Icon = getIcon(result.type)
+                  return (
+                    <CommandItem
+                      key={result.id}
+                      onSelect={() => handleSelect(result)}
+                      className="flex items-center gap-3 py-3 px-3 mb-1 rounded-lg"
+                    >
+                      <div className="w-8 h-8 rounded-lg bg-[#FDEAEA] border border-[#F5C6C6] flex items-center justify-center flex-shrink-0">
+                        <Icon className="w-4 h-4 text-[#CC2B2B]" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <span className="font-semibold truncate block">{result.title}</span>
+                        <p className="text-sm text-muted truncate">{result.description}</p>
+                      </div>
+                    </CommandItem>
+                  )
+                })}
+              </CommandGroup>
+            )}
+            
+            {/* Divider between sections */}
+            {results.filter(r => r.type === 'holiday').length > 0 && results.filter(r => r.type === 'date').length > 0 && (
+              <div className="h-px bg-border my-2" />
+            )}
+
+            {/* Dates */}
+            {results.filter(r => r.type === 'date').length > 0 && (
+              <CommandGroup heading="ДАТИ" className="[&_[cmdk-group-heading]]:text-[11px] [&_[cmdk-group-heading]]:uppercase [&_[cmdk-group-heading]]:tracking-wider [&_[cmdk-group-heading]]:font-semibold [&_[cmdk-group-heading]]:text-muted/70 [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-3">
+                {results.filter(r => r.type === 'date').slice(0, 3).map((result) => {
+                  const Icon = getIcon(result.type)
+                  return (
+                    <CommandItem
+                      key={result.id}
+                      onSelect={() => handleSelect(result)}
+                      className="flex items-center gap-3 py-3 px-3 mb-1 rounded-lg"
+                    >
+                      <div className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 ${
+                        result.isToday 
+                          ? 'bg-primary text-white' 
+                          : 'bg-card border border-border'
+                      }`}>
+                        <Icon className={`w-4 h-4 ${result.isToday ? 'text-white' : 'text-primary'}`} />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2">
+                          <span className="font-semibold truncate">{result.title}</span>
+                          {result.isToday && (
+                            <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-primary text-white font-medium">
+                              днес
+                            </span>
+                          )}
+                        </div>
+                        <p className="text-sm text-muted truncate">{result.description}</p>
                       </div>
                     </CommandItem>
                   )
@@ -292,74 +401,45 @@ export function SearchModal({ open, onOpenChange }: SearchModalProps) {
               </CommandGroup>
             )}
 
-            {/* Institutions */}
-            {results.filter(r => r.type === 'institution').length > 0 && (
-              <CommandGroup heading="Институции">
-                {results.filter(r => r.type === 'institution').slice(0, 4).map((result) => {
-                  const icon = getIcon(result.type)
-                  return (
-                    <CommandItem
-                      key={result.id}
-                      onSelect={() => handleSelect(result)}
-                      className="flex items-center gap-3"
-                    >
-                      <FontAwesomeIcon icon={icon} className="text-sm text-muted" />
-                      <div>
-                        <span className="font-medium">{result.title}</span>
-                        <p className="text-xs text-muted">{result.description}</p>
-                      </div>
-                    </CommandItem>
-                  )
-                })}
-              </CommandGroup>
-            )}
-
-            {/* Categories */}
-            {results.filter(r => r.type === 'category').length > 0 && (
-              <CommandGroup heading="Категории">
-                {results.filter(r => r.type === 'category').slice(0, 3).map((result) => {
-                  const icon = getIcon(result.type)
-                  return (
-                    <CommandItem
-                      key={result.id}
-                      onSelect={() => handleSelect(result)}
-                      className="flex items-center gap-3"
-                    >
-                      <FontAwesomeIcon icon={icon} className="text-sm text-muted" />
-                      <div>
-                        <span className="font-medium">{result.title}</span>
-                        <p className="text-xs text-muted">{result.description}</p>
-                      </div>
-                    </CommandItem>
-                  )
-                })}
-              </CommandGroup>
-            )}
-
-            {/* Docs/Guides */}
-            {results.filter(r => r.type === 'doc').length > 0 && (
-              <CommandGroup heading="Ръководства">
-                {results.filter(r => r.type === 'doc').slice(0, 2).map((result) => {
-                  const icon = getIcon(result.type)
-                  return (
-                    <CommandItem
-                      key={result.id}
-                      onSelect={() => handleSelect(result)}
-                      className="flex items-center gap-3"
-                    >
-                      <FontAwesomeIcon icon={icon} className="text-sm text-muted" />
-                      <div>
-                        <span className="font-medium">{result.title}</span>
-                        <p className="text-xs text-muted">{result.description}</p>
-                      </div>
-                    </CommandItem>
-                  )
-                })}
-              </CommandGroup>
-            )}
+            {/* View All Results Link */}
+            <div className="px-3 py-3 border-t border-border mt-2">
+              <button
+                onClick={() => {
+                  saveRecentSearch(query)
+                  onOpenChange(false)
+                  router.push(`/search?q=${encodeURIComponent(query.trim())}`)
+                }}
+                className="w-full flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-primary hover:text-primary-hover transition-colors rounded-lg hover:bg-accent/10"
+              >
+                <span>Виж всички резултати</span>
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            </div>
           </>
         )}
       </CommandList>
+
+      {/* Keyboard Hints Footer */}
+      <div className="border-t border-border px-3 py-2 flex items-center justify-between text-xs text-muted bg-bg-alt/50">
+        <div className="flex items-center gap-3">
+          <div className="flex items-center gap-1">
+            <kbd className="px-1.5 py-0.5 rounded bg-card border border-border font-mono">↑</kbd>
+            <kbd className="px-1.5 py-0.5 rounded bg-card border border-border font-mono">↓</kbd>
+            <span className="ml-1">навигация</span>
+          </div>
+          <div className="flex items-center gap-1">
+            <kbd className="px-1.5 py-0.5 rounded bg-card border border-border font-mono">↵</kbd>
+            <span className="ml-1">избор</span>
+          </div>
+          <div className="flex items-center gap-1">
+            <kbd className="px-1.5 py-0.5 rounded bg-card border border-border font-mono">esc</kbd>
+            <span className="ml-1">затвори</span>
+          </div>
+        </div>
+        <div className="text-[10px] text-muted/70">
+          ⌘K
+        </div>
+      </div>
     </CommandDialog>
   )
 }

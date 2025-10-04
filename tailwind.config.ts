@@ -43,8 +43,11 @@ const config: Config = {
         'warning': 'rgb(var(--warning-rgb) / <alpha-value>)',
         'info': 'var(--info)',
         'info-bg': 'var(--info-bg)',
+        'info-border': 'var(--info-border)',
         'warning-bg': 'var(--warning-bg)',
+        'warning-border': 'var(--warning-border)',
         'success-bg': 'var(--success-bg)',
+        'success-border': 'var(--success-border)',
         
         // Support colors
         'soft': 'var(--soft)',
@@ -56,6 +59,12 @@ const config: Config = {
         'fg': 'var(--fg)',
         'primary-foreground': 'var(--primary-foreground)',
         'accent-foreground': 'var(--accent-foreground)',
+      },
+      ringColor: {
+        DEFAULT: 'rgb(var(--primary-rgb) / <alpha-value>)',
+        'primary': 'rgb(var(--primary-rgb) / <alpha-value>)',
+        'accent': 'rgb(var(--accent-rgb) / <alpha-value>)',
+        'critical': 'rgb(var(--critical-rgb) / <alpha-value>)',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],

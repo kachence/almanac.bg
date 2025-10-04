@@ -28,25 +28,25 @@ export function UpcomingDates({ dates }: UpcomingDatesProps) {
             key={index}
             className="w-full flex items-start gap-3 p-3 rounded-lg hover:bg-panel transition-colors text-left"
           >
-            <div className="flex-shrink-0 w-14 h-14 bg-[#FFF0C8] border border-[#F0C770] rounded-lg flex flex-col items-center justify-center leading-tight">
+            <span className="flex-shrink-0 w-14 h-14 bg-[#FFF0C8] border border-[#F0C770] rounded-lg flex flex-col items-center justify-center leading-tight">
               <span className="text-[#C95502] font-bold text-lg">
                 {item.date.split(' ')[0]}
               </span>
               <span className="text-[#C95502] font-medium text-xs">
                 {item.date.split(' ')[1]}
               </span>
-            </div>
-            <div className="flex-1 min-w-0">
-              <p className="text-sm font-medium text-text flex items-center gap-1.5">
+            </span>
+            <span className="flex-1 min-w-0 flex flex-col">
+              <span className="text-sm font-semibold text-text flex items-center gap-1.5">
                 <span className="text-base" role="img" aria-label={item.type === 'nameday' ? 'імен ден' : 'празник'}>
                   {item.type === 'nameday' ? '🎉' : '🏛️'}
                 </span>
                 {item.title}
-              </p>
-              <p className="text-xs text-muted-strong">
+              </span>
+              <span className="text-xs text-muted-strong">
                 {item.type === 'nameday' ? 'Имен ден' : 'Празник'}
-              </p>
-            </div>
+              </span>
+            </span>
           </button>
         ))}
       </div>
